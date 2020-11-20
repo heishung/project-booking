@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'AvenirNextLTPro-Bold';
+    src: url('AvenirNextLTPro-Bold.woff2') format('woff2'),
+}
+
+@font-face {
+    font-family: 'AvenirNextLTPro-Demi';
+    src: url('AvenirNextLTPro-Demi.woff2') format('woff2'),
+}
+
+@font-face {
+    font-family: 'AvenirNextLTPro-Heavy';
+    src: url('AvenirNextLTPro-Heavy.woff2') format('woff2'),
+}
+
+@font-face {
+    font-family: 'AvenirNextLTPro-Medium';
+    src: url('AvenirNextLTPro-Medium.woff2') format('woff2'),
+}
+
+@font-face {
+    font-family: 'AvenirNextLTPro-Regular';
+    src: url('AAvenirNextLTPro-Regular.woff2') format('woff2'),
+}
+
+@font-face {
+    font-family: 'AvenirNextLTPro-UltLt';
+    src: url('AvenirNextLTPro-UltLt.woff2') format('woff2'),
+}
+
+body {
+    font-family: 'AvenirNextLTPro-Regular',
+        Fallback,
+        sans-serif;
+}
+
+/* varible*/
+$color-1: #CCCCCC;
+$color-2: #13135E;
+$color-3:#B4C3D4;
+$color-4: #333333;
+$color-5:#FFF6EB;
+$color-6:#999999;
+$color-7:#9A8C60;
+
+.color-pink1 {
+    background-color: $color-1;
+
+}
+
+.btn {
+    @extend button;
+}
+
+button {
+    background-color: $color-7;
+    border: unset;
+    color: white;
+    font-size: 12px;
+    line-height: 14px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+
+    // head
+    header {
+        .top {
+            background-color: #232323;
+            height: 63px;
+
+            .hotline {
+                color: white;
+
+                span {
+                    color: #9B9B9B;
+                }
+            }
+
+            .contact {
+                font-size: 14px;
+                line-height: 17px;
+            }
+        }
+    }
+}

@@ -1,0 +1,67 @@
+@font-face {
+    font-family: 'AvenirNextLTPro-Bold';
+    src: url('AvenirNextLTPro-Bold.woff2') format('woff2'),
+}
+
+@font-face {
+    font-family: 'AvenirNextLTPro-Demi';
+    src: url('AvenirNextLTPro-Demi.woff2') format('woff2'),
+}
+
+@font-face {
+    font-family: 'AvenirNextLTPro-Heavy';
+    src: url('AvenirNextLTPro-Heavy.woff2') format('woff2'),
+}
+
+@font-face {
+    font-family: 'AvenirNextLTPro-Medium';
+    src: url('AvenirNextLTPro-Medium.woff2') format('woff2'),
+}
+
+@font-face {
+    font-family: 'AvenirNextLTPro-Regular';
+    src: url('AAvenirNextLTPro-Regular.woff2') format('woff2'),
+}
+
+@font-face {
+    font-family: 'AvenirNextLTPro-UltLt';
+    src: url('AvenirNextLTPro-UltLt.woff2') format('woff2'),
+}
+
+body {
+    font-family: 'AvenirNextLTPro-Regular',
+        Fallback,
+        sans-serif;
+}
+
+/* varible*/
+$color-1: #CCCCCC;
+$color-2: #13135E;
+$color-3:#B4C3D4;
+$color-4: #333333;
+$color-5:#FFF6EB;
+$color-6:#999999;
+$color-7:#9A8C60;
+$primary-color: #333;
+
+.color-pink1 {
+    background-color: $color-1;
+}
+
+.wrapper {
+
+    // head
+    header {
+        .top {
+            background-color: #232323;
+
+            .hotline {
+                color: white;
+
+                span {
+                    color: #9B9B9B;
+                }
+            }
+        }
+    }
+}
