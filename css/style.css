@@ -68,8 +68,16 @@ button.button-style-2, .button-style-2.button {
   color: #9A8C60;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .wrapper .container {
-  max-width: 1170px;
+  max-width: 1200px;
+}
+
+.wrapper input:focus {
+  outline: unset;
 }
 
 .wrapper ul {
@@ -90,6 +98,12 @@ button.button-style-2, .button-style-2.button {
 
 .wrapper header .top .hotline {
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .wrapper header .top .hotline span {
@@ -173,6 +187,13 @@ button.button-style-2, .button-style-2.button {
   color: #D1D1D1;
 }
 
+@media (max-width: 768px) {
+  .wrapper header .banner .banner-text-content .description {
+    font-size: 1vw;
+    line-height: 1vh;
+  }
+}
+
 .wrapper header .banner .banner-text-content .title {
   font-style: normal;
   font-weight: 500;
@@ -182,12 +203,28 @@ button.button-style-2, .button-style-2.button {
   color: #FFFFFF;
 }
 
+@media (max-width: 768px) {
+  .wrapper header .banner .banner-text-content .title {
+    font-size: 3vw;
+    line-height: 3vh;
+  }
+}
+
+.wrapper section {
+  margin-top: 104px;
+}
+
 .wrapper section .title {
   font-weight: 500;
   font-size: 44px;
   line-height: 59px;
   text-align: center;
   color: #232323;
+  margin-bottom: 56px;
+}
+
+.wrapper section.section-1 .carousel {
+  margin: -10px;
 }
 
 .wrapper section.section-1 .carousel .carousel-item .box-content {
@@ -195,6 +232,7 @@ button.button-style-2, .button-style-2.button {
   display: -ms-inline-flexbox;
   display: inline-flex;
   width: 100%;
+  padding: 10px;
 }
 
 .wrapper section.section-1 .carousel .carousel-item .box-content .cover img {
@@ -260,6 +298,7 @@ button.button-style-2, .button-style-2.button {
 .wrapper section.section-1 .carousel .carousel-indicators {
   position: relative;
   width: 100%;
+  margin-top: 32px;
 }
 
 .wrapper section.section-1 .carousel .carousel-indicators li {
@@ -278,14 +317,31 @@ button.button-style-2, .button-style-2.button {
 .wrapper section.section-2 ul {
   list-style: none;
   padding: 0px;
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 30px;
-  -ms-grid-columns: (minmax(570px, 0.5fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(570px, 0.5fr));
-  -ms-grid-rows: (368px)[2];
-      grid-template-rows: repeat(2, 368px);
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media (min-width: 768px) {
+  .wrapper section.section-2 ul {
+    margin-right: -30px;
+  }
+}
+
+.wrapper section.section-2 ul li {
+  width: 100%;
+  max-width: 570px;
+}
+
+@media (min-width: 768px) {
+  .wrapper section.section-2 ul li {
+    margin: 15px;
+  }
 }
 
 .wrapper section.section-2 ul li .item {
@@ -316,6 +372,7 @@ button.button-style-2, .button-style-2.button {
   margin: 0 auto;
   width: 170px;
   height: 50px;
+  margin-top: 56px;
 }
 
 .wrapper section.section-3 ul {
@@ -330,6 +387,7 @@ button.button-style-2, .button-style-2.button {
   max-width: 270px;
   -webkit-box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 56px;
 }
 
 .wrapper section.section-3 ul li .item-content {
@@ -363,5 +421,79 @@ button.button-style-2, .button-style-2.button {
 .wrapper section.section-3 button, .wrapper section.section-3 .button {
   width: 134px;
   height: 37px;
+}
+
+.wrapper footer {
+  border: 1px solid #F1F3F8;
+  padding-top: 80px;
+  margin-top: 23px;
+}
+
+.wrapper footer h1.title {
+  text-align: center;
+}
+
+.wrapper footer .description {
+  text-align: center;
+}
+
+.wrapper footer .description span {
+  color: #4A4A4A;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.wrapper footer form {
+  margin-top: 26px;
+}
+
+.wrapper footer form input[type=email] {
+  border: unset;
+  border-bottom: 1px solid #E8E8E8;
+  width: 364px;
+  padding: 0px;
+  height: 33px;
+  margin-bottom: -1px;
+}
+
+.wrapper footer form input[type=email]::-webkit-input-placeholder {
+  font-size: 14px;
+  line-height: 17px;
+  color: #9B9B9B;
+}
+
+.wrapper footer form button, .wrapper footer form .button {
+  width: 133.93px;
+  height: 32px;
+}
+
+.wrapper footer .footer-content {
+  border-top: 1px solid #F1F3F8;
+  margin-top: 104px;
+  padding-top: 104px;
+  font-size: 14px;
+  line-height: 34px;
+}
+
+.wrapper footer .footer-content a {
+  color: #535660;
+}
+
+.wrapper footer .footer-content .address a {
+  color: #9A8C60;
+}
+
+.wrapper footer .coppy-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 102px;
+  border-top: 1px solid #F1F3F8;
+  font-size: 14px;
+  line-height: 17px;
+  color: #CDCDCD;
 }
 /*# sourceMappingURL=style.css.map */

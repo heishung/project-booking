@@ -12,9 +12,9 @@
 <body>
     <div class="wrapper">
         <header>
-            <div class="top">
+            <div class="top" id="top">
                 <div class="container d-flex justify-content-between">
-                    <div class="hotline"><span>Hotline:</span> (024) 37477600</div>
+                    <div class="hotline"><span class="mr-2">Hotline:</span> (024) 37477600</div>
                     <div class="contact"><a href="#">Contact us</a>
                         <a class="button" href="#">BOOK NOW</a></div>
                 </div>
@@ -47,7 +47,7 @@
                         <div class="carousel-item active">
                             <div class="box-content">
                                 <div class="cover">
-                                    <img src="image/home/section1/cover/image1.svg" alt="image1" />
+                                    <img src="image/home/section1/cover/image1.PNG" alt="image1" />
                                 </div>
                                 <div class="content">
                                     <div>
@@ -80,7 +80,7 @@
                         <div class="carousel-item">
                             <div class="box-content">
                                 <div class="cover">
-                                    <img src="image/home/section1/cover/image2.svg" alt="image2" />
+                                    <img src="image/home/section1/cover/image2.PNG" alt="image2" />
                                 </div>
                                 <div class="content">
                                     <div>
@@ -112,7 +112,7 @@
                         <div class="carousel-item">
                             <div class="box-content">
                                 <div class="cover">
-                                    <img src="image/home/section1/cover/image3.svg" alt="image3" />
+                                    <img src="image/home/section1/cover/image3.PNG" alt="image3" />
                                 </div>
                                 <div class="content">
                                     <div>
@@ -184,7 +184,7 @@
             </div>
         </section>
         <section class="container-fluid">
-            <img src="image/home/section3/map.svg" class="row" alt="map" />
+            <div class="row"><img src="image/home/section3/map.svg" alt="map" /></div>
         </section>
         <section class="section-3 container">
             <h1 class="title">Rooms & Suites</h1>
@@ -253,46 +253,57 @@
         </section>
         <footer>
             <h1 class="title">Keep connected</h1>
-            <form>
-                <input type="email" />
+            <div class="description"><span>for news, special offers, and much more.</span></div>
+            <form class="text-center">
+                <input type="email" placeholder="Email adress" />
                 <button type="submit" class="">subscribe</button>
             </form>
             <div class="footer-content">
-                <ul>
-                    <li><a href="#">Uvacome Hotel</a></li>
-                    <li><a href="#">33 Giang Van Minh, Ba Dinh, Ha Noi</a></li>
-                    <li><a href="#">uvacomehotel@gmail.com</a></li>
-                    <li><a href="#">(024) 37477600</a></li>
+                <div class="container d-flex flex-wrap justify-content-between">
+                    <ul class="address">
+                        <li><a href="#">Uvacome Hotel</a></li>
+                        <li><a href="#">33 Giang Van Minh, Ba Dinh, Ha Noi</a></li>
+                        <li><a href="#">uvacomehotel@gmail.com</a></li>
+                        <li><a href="#">(024) 37477600</a></li>
 
-                </ul>
-                <ul>
-                    <li><a href="#">Hotel & Resort</a></li>
-                    <li><a href="#">Room</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Gallery</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Term</a></li>
-                    <li><a href="#">FAQs</a></li>
-                </ul>
-                <ul>
-                    <li>
-                        <a href="#">Facebook</a>
-                        <a href="#">Instagram</a>
-                        <a href="#">Google</a>
-                        <a href="#">Youtube</a>
-                    </li>
-                    <li><a href="#">Sitemap</a></li>
-                </ul>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Hotel & Resort</a></li>
+                        <li><a href="#">Room</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Gallery</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Term</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="#">Facebook</a>
+                            <a href="#">Instagram</a>
+                            <a href="#">Google</a>
+                            <a href="#">Youtube</a>
+                        </li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="coppy-right"><span>© 2019 Uvacomehotel. All Rights Reserved</span><a><img
-                        src="image/to-top.svg" /></a></div>
+            <div class="coppy-right">
+                <div class="container ">
+                    <div class="d-flex justify-content-between">
+                        <span>© 2019 Uvacomehotel. All Rights Reserved</span><a onclick='fnScrollTop()' id=""
+                            href="#top"><img src="image/to-top.svg" /></a>
+                    </div>
+
+                </div>
+            </div>
         </footer>
     </div>
     <script src="./js/jquery-3.5.1.slim.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/javascript.js"></script>
 </body>
 </html>

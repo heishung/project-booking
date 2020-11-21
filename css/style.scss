@@ -48,7 +48,8 @@ $color-4: #333333;
 $color-5:#FFF6EB;
 $color-6:#999999;
 $color-7:#9A8C60;
-
+$color-primary:#535660;
+$color-highlight:#9A8C60;
 
 
 .button {
@@ -77,9 +78,19 @@ button {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .wrapper {
   .container {
-    max-width: 1170px;
+    max-width: 1200px;
+  }
+
+  input {
+    &:focus {
+      outline: unset;
+    }
   }
 
   ul {
@@ -97,6 +108,8 @@ button {
 
       .hotline {
         color: white;
+        display: flex;
+        align-items: center;
 
         span {
           color: #9B9B9B;
@@ -166,6 +179,12 @@ button {
 
         .description {
           font-size: 16px;
+
+          @media (max-width: 768px) {
+            font-size: 1vw;
+            line-height: 1vh;
+          }
+
           line-height: 19px;
           text-align: center;
           letter-spacing: 4px;
@@ -177,6 +196,12 @@ button {
         .title {
           font-style: normal;
           font-weight: 500;
+
+          @media (max-width: 768px) {
+            font-size: 3vw;
+            line-height: 3vh;
+          }
+
           font-size: 58px;
           line-height: 70px;
 
@@ -197,14 +222,20 @@ button {
       line-height: 59px;
       text-align: center;
       color: #232323;
+      margin-bottom: 56px;
     }
+
+    margin-top: 104px;
 
     &.section-1 {
       .carousel {
+        margin: -10px;
+
         .carousel-item {
           .box-content {
             display: inline-flex;
             width: 100%;
+            padding: 10px;
 
             .cover {
               // max-width: 769px;
@@ -276,6 +307,7 @@ button {
         .carousel-indicators {
           position: relative;
           width: 100%;
+          margin-top: 32px;
 
           li {
             width: 14px;
@@ -298,13 +330,22 @@ button {
       ul {
         list-style: none;
         padding: 0px;
-        display: grid;
-        grid-gap: 30px;
-        grid-template-columns: repeat(auto-fit, minmax(570px, 0.5fr));
-        grid-template-rows: repeat(2, 368px);
         width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        @media (min-width: 768px) {
+          margin-right: -30px;
+        }
 
         li {
+          width: 100%;
+          max-width: 570px;
+
+          @media (min-width: 768px) {
+            margin: 15px;
+          }
 
           .item {
             position: relative;
@@ -338,6 +379,7 @@ button {
         margin: 0 auto;
         width: 170px;
         height: 50px;
+        margin-top: 56px;
       }
     }
 
@@ -351,6 +393,7 @@ button {
         li {
           max-width: 270px;
           box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+          margin-bottom: 56px;
 
           .item-content {
             padding: 22px 19px 35px;
@@ -392,4 +435,78 @@ button {
     }
   }
 
+  footer {
+    border: 1px solid #F1F3F8;
+    padding-top: 80px;
+    margin-top: 23px;
+
+    h1.title {
+      text-align: center;
+    }
+
+    .description {
+      text-align: center;
+
+      span {
+        color: #4A4A4A;
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+
+    form {
+      margin-top: 26px;
+
+      input[type=email] {
+        border: unset;
+        border-bottom: 1px solid #E8E8E8;
+        width: 364px;
+        padding: 0px;
+        height: 33px;
+        margin-bottom: -1px;
+
+        &::-webkit-input-placeholder {
+          font-size: 14px;
+          line-height: 17px;
+          color: #9B9B9B;
+        }
+      }
+
+      button {
+        width: 133.93px;
+        height: 32px;
+
+      }
+    }
+
+    .footer-content {
+      border-top: 1px solid #F1F3F8;
+      margin-top: 104px;
+      padding-top: 104px;
+      font-size: 14px;
+      line-height: 34px;
+
+      a {
+
+        color: $color-primary;
+      }
+
+      .address {
+        a {
+
+          color: $color-highlight;
+        }
+      }
+    }
+
+    .coppy-right {
+      display: flex;
+      align-items: center;
+      height: 102px;
+      border-top: 1px solid #F1F3F8;
+      font-size: 14px;
+      line-height: 17px;
+      color: #CDCDCD;
+    }
+  }
 }
