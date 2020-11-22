@@ -273,7 +273,7 @@ html {
 }
 
 .wrapper section .title {
-  font-weight: 500;
+  font-family: "AvenirNextLTPro-medium";
   font-size: 44px;
   line-height: 59px;
   text-align: center;
@@ -434,6 +434,7 @@ html {
   grid-gap: 30px;
   -ms-grid-columns: (1fr)[1];
       grid-template-columns: repeat(1, 1fr);
+  margin-bottom: 55px;
 }
 
 @media (min-width: 768px) {
@@ -457,6 +458,8 @@ html {
 @media (min-width: 768px) {
   .wrapper section.section-3 ul li {
     max-width: 270px;
+    max-width: 270px;
+    margin: 0px auto;
   }
 }
 
@@ -599,33 +602,108 @@ html {
   position: relative;
 }
 
-.wrapper footer {
+.wrapper .offer-section-1 .offer-section-1-breadcrumb {
+  background-color: unset;
+  padding: 0px;
+  margin-bottom: 55px;
+}
+
+.wrapper .offer-section-1 .offer-section-1-breadcrumb .breadcrumb-item {
+  color: #9B9B9B;
+  padding-left: 0px;
+}
+
+.wrapper .offer-section-1 .offer-section-1-breadcrumb .breadcrumb-item a {
+  color: #9A8C60;
+}
+
+.wrapper .offer-section-1 .offer-section-1-breadcrumb .breadcrumb-item:first-child {
+  margin-right: 34px;
+}
+
+.wrapper .offer-section-1 .offer-section-1-breadcrumb .breadcrumb-item:nth-child(2)::before {
+  display: none;
+}
+
+.wrapper .offer-section-1 .offer-section-1-breadcrumb .breadcrumb-item::before {
+  padding: 0px 23px;
+}
+
+.wrapper .offer-section-1 .offer-section-1-pagination ol {
+  margin: 0px;
+  margin-left: 12px;
+  margin-right: 12px;
+  list-style: none;
+  padding: 0px;
+}
+
+.wrapper .offer-section-1 .offer-section-1-pagination ol li {
+  all: unset;
+  display: none;
+}
+
+.wrapper .offer-section-1 .offer-section-1-pagination ol li.active {
+  display: block;
+}
+
+.wrapper .page-gallery-section-1 .gallery-section-1-pagination {
+  margin-top: 56px;
+}
+
+.section-swiper .swiper-slide-next,
+.section-swiper .swiper-slide-prev {
+  opacity: 0.2;
+  width: 36px;
+  height: 20px;
+}
+
+.section-swiper .swiper-button-next {
+  right: 20px;
+}
+
+.section-swiper .swiper-button-next:after {
+  content: url(/image/swiper/icon-next.svg);
+  width: 36px;
+  height: 20px;
+}
+
+.section-swiper .swiper-button-prev {
+  left: 20px;
+}
+
+.section-swiper .swiper-button-prev:after {
+  content: url(/image/swiper/icon-prev.svg);
+  width: 36px;
+  height: 20px;
+}
+
+footer {
   border: 1px solid #F1F3F8;
   padding-top: 80px;
   margin-top: 23px;
 }
 
-.wrapper footer h1.title {
+footer h1.title {
   text-align: center;
   font-family: 'AvenirNextLTPro-Medium';
   margin-bottom: 24px;
 }
 
-.wrapper footer .description {
+footer .description {
   text-align: center;
 }
 
-.wrapper footer .description span {
+footer .description span {
   color: #4A4A4A;
   font-size: 18px;
   line-height: 22px;
 }
 
-.wrapper footer form {
+footer form {
   margin-top: 56px;
 }
 
-.wrapper footer form input[type=email] {
+footer form input[type=email] {
   border: unset;
   border-bottom: 1px solid #E8E8E8;
   width: 364px;
@@ -634,18 +712,18 @@ html {
   margin-bottom: -1px;
 }
 
-.wrapper footer form input[type=email]::-webkit-input-placeholder {
+footer form input[type=email]::-webkit-input-placeholder {
   font-size: 14px;
   line-height: 17px;
   color: #9B9B9B;
 }
 
-.wrapper footer form button, .wrapper footer form .button {
+footer form button, footer form .button {
   width: 133.93px;
   height: 32px;
 }
 
-.wrapper footer .footer-content {
+footer .footer-content {
   border-top: 1px solid #F1F3F8;
   margin-top: 104px;
   padding-top: 104px;
@@ -653,15 +731,15 @@ html {
   line-height: 34px;
 }
 
-.wrapper footer .footer-content a {
+footer .footer-content a {
   color: #535660;
 }
 
-.wrapper footer .footer-content .address a {
+footer .footer-content .address a {
   color: #9A8C60;
 }
 
-.wrapper footer .coppy-right {
+footer .coppy-right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
