@@ -28,18 +28,6 @@
   src: url('/font/AvenirNextLTPro-UltLt.woff2') format('woff2'),
 }
 
-body {
-  font-family: 'AvenirNextLTPro-Regular',
-    Fallback,
-    sans-serif;
-
-  img {
-    max-width: 100%;
-    object-fit: contain;
-    height: auto;
-  }
-}
-
 /* varible*/
 $color-1: #CCCCCC;
 $color-2: #13135E;
@@ -50,6 +38,27 @@ $color-6:#999999;
 $color-7:#9A8C60;
 $color-primary:#535660;
 $color-highlight:$color-7;
+
+body {
+  font-family: 'AvenirNextLTPro-Regular',
+    Fallback,
+    sans-serif;
+
+  a {
+    &:hover {
+      color: $color-highlight !important;
+      text-decoration: unset;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    object-fit: contain;
+    height: auto;
+  }
+}
+
+
 
 
 .button {
@@ -80,11 +89,17 @@ button {
     outline: none;
   }
 
-  &.button-style-2 {
+  &:hover {
     background-color: white;
     border: 1px solid $color-7;
     color: $color-7;
   }
+
+  // &.button-style-2 {
+  //   background-color: white;
+  //   border: 1px solid $color-7;
+  //   color: $color-7;
+  // }
 }
 
 html {
@@ -370,6 +385,77 @@ html {
 
 
       }
+    }
+
+    &.section__map {
+      .section__map__info__container {
+        width: 370px;
+        max-width: 100%;
+        top: 50%;
+        right: 19%;
+        padding-bottom: 40px;
+        background: #FFFFFF;
+        -webkit-box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        transform: translate(0%, -50%);
+
+        .section__map__info {
+          max-width: 254px;
+
+          .section__map__info__title {
+            font-family: "AvenirNextLTPro-medium";
+            margin-bottom: 0px;
+            font-size: 32px;
+            line-height: 59px;
+            color: #000000;
+            margin-top: 43px;
+          }
+
+          .section__map__info__content {
+            font-size: 16px;
+            line-height: 21px;
+            color: #4E4E4E;
+            margin-top: 11px;
+          }
+
+          .section__map__info__status {
+            margin-top: 14px;
+            font-size: 12px;
+            line-height: 14px;
+            text-align: justify;
+            text-transform: uppercase;
+
+            color: #9A8C60;
+          }
+
+          .section__map__info__hotline__email {
+            margin-top: 8px;
+
+            &:first-child {
+              margin-top: 27px;
+            }
+
+            font-size: 16px;
+            line-height: 19px;
+            text-align: justify;
+            color: #4A4A4A;
+
+            span {
+              color: $color-highlight;
+            }
+          }
+
+          button {
+            width: 128px;
+            height: 42px;
+            margin-top: 41px;
+          }
+
+        }
+      }
+
     }
 
     &.section-2 {
@@ -754,6 +840,14 @@ footer {
       a {
 
         color: $color-highlight;
+      }
+    }
+  }
+
+  .social {
+    li {
+      a {
+        margin-left: 20px;
       }
     }
   }

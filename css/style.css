@@ -28,8 +28,14 @@
   src: url("/font/AvenirNextLTPro-UltLt.woff2") format("woff2");
 }
 
+/* varible*/
 body {
   font-family: 'AvenirNextLTPro-Regular', Fallback, sans-serif;
+}
+
+body a:hover {
+  color: #9A8C60 !important;
+  text-decoration: unset;
 }
 
 body img {
@@ -39,7 +45,6 @@ body img {
   height: auto;
 }
 
-/* varible*/
 img.img-cover {
   position: absolute;
   left: 0px;
@@ -72,7 +77,7 @@ button:focus, .button:focus {
   outline: none;
 }
 
-button.button-style-2, .button-style-2.button {
+button:hover, .button:hover {
   background-color: white;
   border: 1px solid #9A8C60;
   color: #9A8C60;
@@ -365,6 +370,76 @@ html {
 .wrapper section.section-1 .carousel .carousel-item .box-content .content button, .wrapper section.section-1 .carousel .carousel-item .box-content .content .button {
   width: 125px;
   height: 35px;
+}
+
+.wrapper section.section__map .section__map__info__container {
+  width: 370px;
+  max-width: 100%;
+  top: 50%;
+  right: 19%;
+  padding-bottom: 40px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+}
+
+.wrapper section.section__map .section__map__info__container .section__map__info {
+  max-width: 254px;
+}
+
+.wrapper section.section__map .section__map__info__container .section__map__info .section__map__info__title {
+  font-family: "AvenirNextLTPro-medium";
+  margin-bottom: 0px;
+  font-size: 32px;
+  line-height: 59px;
+  color: #000000;
+  margin-top: 43px;
+}
+
+.wrapper section.section__map .section__map__info__container .section__map__info .section__map__info__content {
+  font-size: 16px;
+  line-height: 21px;
+  color: #4E4E4E;
+  margin-top: 11px;
+}
+
+.wrapper section.section__map .section__map__info__container .section__map__info .section__map__info__status {
+  margin-top: 14px;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: justify;
+  text-transform: uppercase;
+  color: #9A8C60;
+}
+
+.wrapper section.section__map .section__map__info__container .section__map__info .section__map__info__hotline__email {
+  margin-top: 8px;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: justify;
+  color: #4A4A4A;
+}
+
+.wrapper section.section__map .section__map__info__container .section__map__info .section__map__info__hotline__email:first-child {
+  margin-top: 27px;
+}
+
+.wrapper section.section__map .section__map__info__container .section__map__info .section__map__info__hotline__email span {
+  color: #9A8C60;
+}
+
+.wrapper section.section__map .section__map__info__container .section__map__info button, .wrapper section.section__map .section__map__info__container .section__map__info .button {
+  width: 128px;
+  height: 42px;
+  margin-top: 41px;
 }
 
 .wrapper section.section-2 ul {
@@ -737,6 +812,10 @@ footer .footer-content a {
 
 footer .footer-content .address a {
   color: #9A8C60;
+}
+
+footer .social li a {
+  margin-left: 20px;
 }
 
 footer .coppy-right {
