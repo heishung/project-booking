@@ -65,6 +65,10 @@ body {
   @extend button;
 }
 
+.color--highlight {
+  color: $color-highlight;
+}
+
 img.img-cover {
   position: absolute;
   left: 0px;
@@ -164,6 +168,10 @@ html {
       .contact {
         font-size: 14px;
         line-height: 17px;
+        font-size: 14px;
+        line-height: 17px;
+        display: flex;
+        align-items: center;
 
         .button {
           width: 117px;
@@ -303,103 +311,109 @@ html {
       .carousel {
         margin: -10px;
 
-        .carousel-item {
-          .box-content {
-            display: inline-flex;
-            width: 100%;
-            padding: 10px;
+        .carousel-item {}
 
-            .cover {
-              max-width: 769px;
-              width: 100%;
-              position: relative;
+
+      }
+
+      .box-content {
+        display: inline-flex;
+        width: 100%;
+        padding: 10px;
+
+        .cover {
+          max-width: 769px;
+          width: 100%;
+          position: relative;
+
+          img {
+            // position: absolute;
+            // width: 100%;
+            // height: 100%;
+            // top: 0px;
+            // left: 0xp;
+            object-fit: cover;
+          }
+
+          // padding-top: 70.481144%;
+        }
+
+        .content {
+          max-width: 100%;
+          width: 100%;
+
+          @media (min-width:768px) {
+            max-width: 400px;
+            width: 100%;
+          }
+
+          display: flex;
+          justify-content: center;
+          box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+          padding-top: 48px;
+
+          &>div {
+            max-width: 278px;
+          }
+
+          h3 {
+            font-weight: 500;
+            font-size: 26px;
+            line-height: 37px;
+            color: #4A4A4A;
+          }
+
+          p {
+            font-size: 16px;
+            line-height: 24px;
+            color: #4A4A4A;
+            margin-bottom: 43px;
+
+          }
+
+          ul {
+            padding: 0px;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 27px;
+
+            li {
+              width: 50%;
 
               img {
-                // position: absolute;
-                // width: 100%;
-                // height: 100%;
-                // top: 0px;
-                // left: 0xp;
-                object-fit: cover;
-              }
-
-              // padding-top: 70.481144%;
-            }
-
-            .content {
-              max-width: 100%;
-              width: 100%;
-
-              @media (min-width:768px) {
-                max-width: 400px;
-                width: 100%;
-              }
-
-              display: flex;
-              justify-content: center;
-              box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
-              padding-top: 48px;
-
-              &>div {
-                max-width: 278px;
-              }
-
-              h3 {
-                font-weight: 500;
-                font-size: 26px;
-                line-height: 37px;
-                color: #4A4A4A;
-              }
-
-              p {
-                font-size: 16px;
-                line-height: 24px;
-                color: #4A4A4A;
-                margin-bottom: 43px;
-
-              }
-
-              ul {
-                padding: 0px;
-                list-style: none;
-                display: flex;
-                flex-wrap: wrap;
-                margin-bottom: 27px;
-
-                li {
-                  width: 50%;
-
-                  img {
-                    margin-right: 10px;
-                  }
-                }
-              }
-
-              button {
-                width: 125px;
-                height: 35px;
+                margin-right: 10px;
               }
             }
           }
+
+          button {
+            width: 125px;
+            height: 35px;
+          }
         }
-
-
       }
     }
 
     &.section__map {
       .section__map__info__container {
-        width: 370px;
         max-width: 100%;
-        top: 50%;
-        right: 19%;
+        width: 100%;
         padding-bottom: 40px;
         background: #FFFFFF;
         -webkit-box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
         box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
         display: flex;
         justify-content: center;
-        transform: translate(0%, -50%);
+        position: relative;
+
+        @media (min-width:768px) {
+          position: absolute;
+          top: 50%;
+          right: 19%;
+          transform: translate(0%, -50%);
+          width: 370px;
+        }
 
         .section__map__info {
           max-width: 254px;
@@ -418,6 +432,7 @@ html {
             line-height: 21px;
             color: #4E4E4E;
             margin-top: 11px;
+            max-width: 225px;
           }
 
           .section__map__info__status {
@@ -778,6 +793,273 @@ html {
   }
 }
 
+.container-about {
+
+  .title {}
+
+  .content {
+    width: 770px;
+    text-align: center;
+    max-width: 100%;
+  }
+}
+
+// Rooms & Suites
+.room-container-info {
+  padding-bottom: 64px;
+
+  .room-container-info-list-img {
+    max-width: 770px;
+    width: 100%;
+
+
+    .carousel {
+      position: relative;
+
+      @media all and (transform-3d),
+      (-webkit-transform-3d) {
+
+        .carousel-inner>.item.next,
+        .carousel-inner>.item.active.right {
+          left: 0;
+          -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
+        }
+
+        .carousel-inner>.item.prev,
+        .carousel-inner>.item.active.left {
+          left: 0;
+          -webkit-transform: translate3d(100%, 0, 0);
+          transform: translate3d(100%, 0, 0);
+        }
+      }
+
+      .carousel-item {
+        position: relative;
+        max-width: 770px;
+
+        padding-top: 70.3896%;
+
+        img {
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          filter: drop-shadow(0px 2px 15px rgba(0, 0, 0, 0.1));
+        }
+      }
+    }
+
+    .carousel-indicators {
+      @extend .carousel-indicators-custom;
+      margin-left: 0px;
+      margin-right: 0px;
+      bottom: -64px;
+    }
+
+  }
+
+
+  .room-container-info-content {
+    padding-top: 48px;
+    max-width: 100%;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+
+    >div {
+      max-width: 287px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .room-container-info-title {
+      font-family: "AvenirNextLTPro-medium";
+      font-size: 26px;
+      line-height: 37px;
+      color: #4A4A4A;
+      margin-bottom: 16px;
+
+    }
+
+    .room-container-info-description {
+      font-size: 16px;
+      line-height: 24px;
+      color: #4E4E4E;
+    }
+  }
+}
+
+.rooms-suites-section-1 {
+  @extend .offer-section-1;
+
+  .box-content {
+    margin-bottom: 56px;
+
+    .content {
+      button {
+        width: 278px!important;
+        height: 46px!important;
+      }
+    }
+
+  }
+}
+
+.room-detail-container {
+  max-width: 1031px;
+  margin: 0 auto;
+
+  .blank-64 {
+    height: 64px;
+  }
+
+  .room-detail-container-top-content {
+
+
+    .room-detail-container-top-content__item {
+      padding-left: 10px;
+
+      @media (min-width:768px) {
+        padding-left: 45px;
+      }
+
+      .room-detail-container-top-content__item__title {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 24px;
+        color: #9B9B9B;
+      }
+
+      .room-detail-container-top-content__item__content {
+        font-size: 16px;
+        line-height: 21px;
+        color: #4E4E4E;
+      }
+    }
+  }
+
+  .room-detail-container__line {
+    opacity: 0.2;
+    background-color: #979797;
+    height: 1px;
+    width: 100%;
+  }
+
+  .room-detail-container__content {
+    margin-bottom: 40px;
+
+    .room-detail-container__benefits {
+      .room-detail-container__benefits__title {
+        font-family: "AvenirNextLTPro-medium";
+        font-size: 18px;
+        line-height: 22px;
+
+        text-align: justify;
+
+        color: #4E4E4E;
+      }
+
+      .room-detail-container__benefits__content {
+
+        li {
+          &:first-child {
+            margin-top: 32px;
+          }
+
+          max-width: 388px;
+          font-size: 16px;
+          line-height: 25px;
+          margin-top: 24px;
+          color: #4A4A4A;
+          display: flex;
+
+          &:before {
+            content: "-";
+            display: inline-block;
+            margin-right: 8px;
+          }
+        }
+      }
+    }
+
+    .room-detail-container__feature {
+      .room-detail-container__benefits__title {
+        font-family: "AvenirNextLTPro-medium";
+        font-size: 18px;
+        line-height: 22px;
+        text-align: justify;
+        color: #4E4E4E;
+      }
+
+      ul {
+        margin-top: 32px;
+
+        li {
+          padding-left: 35px;
+          font-size: 16px;
+          line-height: 19px;
+          color: #4E4E4E;
+          margin-bottom: 32px;
+
+          img {
+            margin-right: 25px;
+            width: 30px;
+            object-fit: scale-down;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+//conferance
+.conferance-post {
+  margin-bottom: 104px;
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+
+  .conferance-post__container {
+    padding: 44px 70px;
+
+    .conferance-post__title {
+      height: 92px;
+      font-family: 'AvenirNextLTPro-medium';
+      font-size: 32px;
+      line-height: 42px;
+      /* or 131% */
+
+
+      color: #4A4A4A;
+    }
+
+    .conferance-post__content {
+      margin-bottom: 40px;
+      margin-top: 6px;
+      width: 430px;
+      max-width: 100%;
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    .item-read-more {
+      cursor: pointer;
+
+      img {
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+// footer
 footer {
   border: 1px solid #F1F3F8;
   padding-top: 80px;
@@ -806,6 +1088,7 @@ footer {
       border: unset;
       border-bottom: 1px solid #E8E8E8;
       width: 364px;
+      max-width: 100%;
       padding: 0px;
       height: 33px;
       margin-bottom: -1px;
