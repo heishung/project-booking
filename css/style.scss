@@ -48,17 +48,40 @@ body {
     line-height: 30px;
   }
 
+  .component-title-medium {
+    font-family: "AvenirNextLTPro-medium";
+    font-size: 24px;
+    line-height: 37px;
+    color: #4A4A4A;
+  }
+
   .font-weight-medium {
     font-family: "AvenirNextLTPro-medium";
+  }
+
+  .max-width-970 {
+    width: 100%;
+    max-width: 100%;
+
+    @media (min-width: 970px) {
+      width: 970px;
+    }
+
+    margin: 0 auto;
   }
 
   .line-height-19 {
     line-height: 19px;
   }
 
-  .margin-bottom {
+  .margin-bottom-30 {
     margin-bottom: 30px;
   }
+
+  .margin-bottom-56 {
+    margin-bottom: 56px;
+  }
+
 
   .title--small {
     font-size: 18px !important;
@@ -98,6 +121,38 @@ body {
     max-width: 100%;
     object-fit: contain;
     height: auto;
+  }
+
+  .datepicker {
+    width: 430px;
+    border: unset;
+    border-radius: unset;
+    &.datepicker-dropdown {
+      &:after {
+        display: none;
+      }
+
+      &:before {
+        display: none;
+      }
+
+      .table-condensed {
+        width: 100%;
+      }
+    }
+  }
+
+  #datepicker {
+    background: #F9F9F9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding-left: 0px;
+    padding-right: 0px;
+    &:hover{
+      outline-style: unset;
+    }
+    .btn-group {
+      box-shadow: unset;
+    }
   }
 }
 
@@ -175,6 +230,23 @@ html {
   }
 
   input {
+    &:focus {
+      outline: unset;
+    }
+  }
+
+  select {
+    height: 46px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    background-image: url(/image/icon-dropdown-select.svg);
+    background-repeat: no-repeat;
+    background-position-x: 97%;
+    background-position-y: 18px;
+    border-radius: 2px;
+    padding-left: 1rem;
+
     &:focus {
       outline: unset;
     }
@@ -329,6 +401,59 @@ html {
       }
     }
 
+    .form-select-room {
+      bottom: 0px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+
+      .form-select-room__select__button {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        width: 270px;
+        height: 83px;
+      }
+
+      .form-select-room__select {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+        &.form-select-room__select__datepicker1 {
+          width: 216px;
+        }
+
+        &.form-select-room__select__datepicker2 {
+          width: 214px;
+        }
+
+        .dropdown-menu {
+          top: -3px !important;
+          border: unset;
+          background: #F9F9F9;
+        }
+
+        a {
+          width: 270px;
+          height: 62px;
+
+          &:hover {
+            background: #C4C4C4;
+          }
+        }
+
+        button {
+          width: 270px;
+          height: 83px;
+          background: #F9F9F9;
+          border-radius: unset;
+
+          &:hover {
+            outline: unset;
+          }
+
+          &:focus {
+            box-shadow: unset;
+          }
+        }
+      }
+    }
 
   }
 
@@ -922,68 +1047,7 @@ html {
       opacity: 0.6;
     }
 
-    .page-detail__content-info-box-container-check-box {
-      label {
-        padding-left: 15px;
-        font-size: 16px;
-        line-height: 21px;
-        color: #232323;
-        display: block;
-        position: relative;
-        cursor: pointer;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
 
-        input {
-          position: absolute;
-          opacity: 0;
-          cursor: pointer;
-        }
-
-        .checkmark {
-          position: absolute;
-          top: 6px;
-          left: 0;
-
-          height: 10px;
-          width: 10px;
-          border: 1px solid $color-7;
-          border-radius: 50%;
-
-        }
-
-        &:hover input~.checkmark {
-          background-color: #ccc;
-        }
-
-        input:checked~.checkmark {
-          background-color: $color-7;
-        }
-
-        .checkmark:after {
-          content: "";
-          position: absolute;
-          display: none;
-        }
-
-        input:checked~.checkmark:after {
-          display: block;
-        }
-
-        .checkmark:after {
-          top: 1px;
-          left: 1px;
-          width: 6px;
-          height: 6px;
-          border-radius: 50%;
-          border: 1px solid white;
-          background: $color-7;
-        }
-      }
-
-    }
 
     .page-detail__content-info-box__price {
       margin-bottom: 15px;
@@ -1331,6 +1395,14 @@ html {
   }
 }
 
+// contact
+#contact-us {
+  .page-detail__content-info-contact {
+    box-shadow: unset;
+    padding-top: 0px;
+  }
+}
+
 //component
 .section-swiper {
 
@@ -1360,6 +1432,12 @@ html {
       height: 20px;
     }
   }
+}
+
+.line {
+  background-color: #E8E8E8;
+  height: 1px;
+  width: 100%;
 }
 
 .section-collapse {
@@ -1404,6 +1482,91 @@ html {
     }
   }
 
+
+}
+
+
+
+.form-contact {
+  .form-group {
+    width: 370px;
+    max-width: 100%;
+
+    input {
+      height: 46px;
+    }
+
+    &.form-group__text-area {
+      margin-bottom: 56px;
+    }
+  }
+
+  button {
+    width: 134px;
+    height: 32px;
+  }
+}
+
+.page-detail__content-info-box-container-check-box {
+  label {
+    padding-left: 15px;
+    font-size: 16px;
+    line-height: 21px;
+    color: #232323;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .checkmark {
+      position: absolute;
+      top: 6px;
+      left: 0;
+
+      height: 10px;
+      width: 10px;
+      border: 1px solid $color-7;
+      border-radius: 50%;
+
+    }
+
+    &:hover input~.checkmark {
+      background-color: #ccc;
+    }
+
+    input:checked~.checkmark {
+      background-color: $color-7;
+    }
+
+    .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+
+    input:checked~.checkmark:after {
+      display: block;
+    }
+
+    .checkmark:after {
+      top: 1px;
+      left: 1px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      border: 1px solid white;
+      background: $color-7;
+    }
+  }
 
 }
 
