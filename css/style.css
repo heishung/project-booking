@@ -158,13 +158,13 @@ body .datepicker {
 }
 
 body .datepicker .icon-arrow-right {
-  content: url(/image/datepicker/arrow-right.svg);
+  content: url(../image/datepicker/arrow-right.svg);
   position: absolute;
   top: 10px;
 }
 
 body .datepicker .icon-arrow-left {
-  content: url(/image/datepicker/arrow-left.svg);
+  content: url(../image/datepicker/arrow-left.svg);
   position: absolute;
   top: 10px;
 }
