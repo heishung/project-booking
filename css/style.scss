@@ -125,6 +125,8 @@ body {
 
   .datepicker {
     width: 430px;
+    padding-top: 40px;
+    padding-bottom: 50px;
     border: unset;
     border-radius: unset;
     &.datepicker-dropdown {
@@ -140,11 +142,41 @@ body {
         width: 100%;
       }
     }
+    .datepicker-days{
+      max-width: 280px;
+      margin: 0 auto;
+      .table-condensed{
+        thead{
+          tr{
+            th{
+              &.switch{
+                padding-bottom: 50px;
+                font-size: 16px;
+                line-height: 19px;
+                color: #4E4E4E;
+                font-weight: 400;
+              }
+            }
+          }
+        }
+        tr{
+          td{
+            width: 40px;
+            height: 40px;
+            &.active{
+              background: unset!important;
+              color: #4A4A4A!important;
+              border: 1px solid #9B9B9B!important;
+              box-sizing: border-box!important;
+            }
+          }
+        }
+      }
+    }
   }
 
   #datepicker {
     background: #F9F9F9;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding-left: 0px;
     padding-right: 0px;
     &:hover{
@@ -153,6 +185,7 @@ body {
     .btn-group {
       box-shadow: unset;
     }
+  
   }
 }
 
@@ -402,7 +435,7 @@ html {
     }
 
     .form-select-room {
-      bottom: 0px;
+      bottom: -3px;
       left: 50%;
       transform: translate(-50%, 0%);
 
@@ -413,14 +446,23 @@ html {
       }
 
       .form-select-room__select {
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)!important;
+        height: 83px;
 
         &.form-select-room__select__datepicker1 {
           width: 216px;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)!important;
+          display: flex;
+          align-items: center;
+          height: 83px;
         }
 
         &.form-select-room__select__datepicker2 {
           width: 214px;
+          height: 100%;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)!important;
+          display: flex;
+          align-items: center;
         }
 
         .dropdown-menu {
@@ -432,7 +474,6 @@ html {
         a {
           width: 270px;
           height: 62px;
-
           &:hover {
             background: #C4C4C4;
           }

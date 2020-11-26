@@ -107,6 +107,8 @@ body img {
 
 body .datepicker {
   width: 430px;
+  padding-top: 40px;
+  padding-bottom: 50px;
   border: unset;
   border-radius: unset;
 }
@@ -123,10 +125,34 @@ body .datepicker.datepicker-dropdown .table-condensed {
   width: 100%;
 }
 
+body .datepicker .datepicker-days {
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+body .datepicker .datepicker-days .table-condensed thead tr th.switch {
+  padding-bottom: 50px;
+  font-size: 16px;
+  line-height: 19px;
+  color: #4E4E4E;
+  font-weight: 400;
+}
+
+body .datepicker .datepicker-days .table-condensed tr td {
+  width: 40px;
+  height: 40px;
+}
+
+body .datepicker .datepicker-days .table-condensed tr td.active {
+  background: unset !important;
+  color: #4A4A4A !important;
+  border: 1px solid #9B9B9B !important;
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important;
+}
+
 body #datepicker {
   background: #F9F9F9;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding-left: 0px;
   padding-right: 0px;
 }
@@ -395,7 +421,7 @@ html {
 }
 
 .wrapper header .form-select-room {
-  bottom: 0px;
+  bottom: -3px;
   left: 50%;
   -webkit-transform: translate(-50%, 0%);
           transform: translate(-50%, 0%);
@@ -409,16 +435,35 @@ html {
 }
 
 .wrapper header .form-select-room .form-select-room__select {
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+  height: 83px;
 }
 
 .wrapper header .form-select-room .form-select-room__select.form-select-room__select__datepicker1 {
   width: 216px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 83px;
 }
 
 .wrapper header .form-select-room .form-select-room__select.form-select-room__select__datepicker2 {
   width: 214px;
+  height: 100%;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .wrapper header .form-select-room .form-select-room__select .dropdown-menu {
