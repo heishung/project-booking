@@ -90,6 +90,7 @@ body .margin-bottom-56 {
 
 body .margin-bottom-50 {
   margin-bottom: 50px;
+  display: block;
 }
 
 body .title--small {
