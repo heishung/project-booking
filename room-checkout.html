@@ -40,16 +40,16 @@
     </header>
     <section class=" container">
       <div class="top margin-bottom-56 text-center">
-        <div>Rooms & suites</div>
-        <div>Check out</div>
+        <div class="head-page-description margin-bottom-16">Rooms & suites</div>
+        <div class="head-title-medium">Check out</div>
       </div>
       <div class="line"></div>
       <div class="d-flex flex-wrap justify-content-around pt-4 pb-4 ">
-        <div>Grand Delux Room</div>
-        <div>Your Stay: 3 Day</div>
-        <div>Guests: 2 Adults
+        <div class="font-weight-demi">Grand Delux Room</div>
+        <div><span class="font-weight-demi">Your Stay: 3 Day</span> 3 Day</div>
+        <div><span class="font-weight-demi">Guests</span>: 2 Adults
         </div>
-        <div>Total Rate: $1200</div>
+        <div><span class="font-weight-demi">Total Rate:</span> $1200</div>
       </div>
       <div class="line margin-bottom-56"></div>
       <div class="component-title-medium margin-bottom-56 text-uppercase">
@@ -83,11 +83,17 @@
         <div class="w-100 d-flex justify-content-around margin-bottom-56 flex-wrap">
           <div class="form-group mb-0 d-flex flex-column">
             <label for="select-payment">Payment Type</label>
-            <select name="select-payment" class="" id="select-payment">
-              <option value="volvo">Visa Crad</option>
-              <option value="saab">Master Card</option>
-              <option value="mercedes">JCB International</option>
-            </select>
+            <div class="btn-group form-select-room__select">
+              <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="text-capitalize"></span> <img src="/image/icon-dropdown-select.svg" />
+              </button>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" type="button">Visa Crad</a>
+                <a class="dropdown-item" type="button">Master Card</a>
+                <a class="dropdown-item" type="button">JCB International</a>
+              </div>
+            </div>
+
           </div>
           <div class="form-group mb-0 d-flex flex-column">
           </div>
@@ -168,54 +174,54 @@
 
 
     <footer>
-      <h1 class="title">Keep connected</h1>
-      <div class="description"><span>for news, special offers, and much more.</span></div>
-      <form class="text-center">
-        <input type="email" placeholder="Email adress" />
-        <button type="submit" class="">subscribe</button>
-      </form>
-      <div class="footer-content">
-        <div class="container d-flex flex-wrap justify-content-between">
-          <ul class="address">
-            <li><a href="#">Uvacome Hotel</a></li>
-            <li><a href="#">33 Giang Van Minh, Ba Dinh, Ha Noi</a></li>
-            <li><a href="#">uvacomehotel@gmail.com</a></li>
-            <li><a href="#">(024) 37477600</a></li>
+            <h1 class="title">Keep connected</h1>
+            <div class="description"><span>for news, special offers, and much more.</span></div>
+            <form class="text-center">
+                <input type="email" placeholder="Email adress" />
+                <button type="submit" class="">subscribe</button>
+            </form>
+            <div class="footer-content">
+                <div class="container d-flex flex-wrap justify-content-between">
+                    <ul class="address">
+                        <li><a href="#">Uvacome Hotel</a></li>
+                        <li><a href="#">33 Giang Van Minh, Ba Dinh, Ha Noi</a></li>
+                        <li><a href="#">uvacomehotel@gmail.com</a></li>
+                        <li><a href="#">(024) 37477600</a></li>
 
-          </ul>
-          <ul>
-            <li><a href="#">Hotel & Resort</a></li>
-            <li><a href="#">Room</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Gallery</a></li>
-          </ul>
-          <ul>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Term</a></li>
-            <li><a href="#">FAQs</a></li>
-          </ul>
-          <ul class="social">
-            <li>
-              <a href="#">Facebook</a>
-              <a href="#">Instagram</a>
-              <a href="#">Google</a>
-              <a href="#">Youtube</a>
-            </li>
-            <li><a href="#">Sitemap</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="coppy-right">
-        <div class="container ">
-          <div class="d-flex justify-content-between">
-            <span>© 2019 Uvacomehotel. All Rights Reserved</span><a onclick='fnScrollTop()' id="" href="#top"><img
-                src="image/to-top.svg" /></a>
-          </div>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Hotel & Resort</a></li>
+                        <li><a href="/rooms.html">Room</a></li>
+                        <li><a href="/about.html">About</a></li>
+                        <li><a href="/gallery.html">Gallery</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="/contact-us.html">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Term</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                    <ul class="social">
+                        <li>
+                            <a href="#">Facebook</a>
+                            <a href="#">Instagram</a>
+                            <a href="#">Google</a>
+                            <a href="#">Youtube</a>
+                        </li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="coppy-right">
+                <div class="container ">
+                    <div class="d-flex justify-content-between">
+                        <span>© 2019 Uvacomehotel. All Rights Reserved</span><a onclick='fnScrollTop()' id=""
+                            href="#top"><img src="image/to-top.svg" /></a>
+                    </div>
 
-        </div>
-      </div>
-    </footer>
+                </div>
+            </div>
+        </footer>
   </div>
   <script src="/js/swiper-bundle.min.js"></script>
   <script src="/js/jquery-3.5.1.slim.min.js"></script>

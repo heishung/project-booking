@@ -59,6 +59,10 @@ body {
     font-family: "AvenirNextLTPro-medium";
   }
 
+  .font-weight-demi {
+    font-family: "AvenirNextLTPro-Demi";
+  }
+
   .max-width-970 {
     width: 100%;
     max-width: 100%;
@@ -78,8 +82,23 @@ body {
     margin-bottom: 30px;
   }
 
+  .margin-bottom-16 {
+    margin-bottom: 16px;
+  }
+
+  .margin-bottom-19 {
+    margin-bottom: 19px;
+  }
+
+  .margin-bottom-25 {
+    margin-bottom: 25px;
+  }
+
   .margin-bottom-56 {
     margin-bottom: 56px;
+  }
+  .margin-bottom-50 {
+    margin-bottom: 50px;
   }
 
 
@@ -99,6 +118,8 @@ body {
   }
 
   a {
+    color: #000000;
+
     &:hover {
       color: $color-highlight !important;
       text-decoration: unset;
@@ -117,6 +138,25 @@ body {
     color: #7C7C7C;
   }
 
+  .head-title-medium {
+    font-family: "AvenirNextLTPro-medium";
+    font-size: 40px;
+    line-height: 55px;
+    text-align: center;
+    color: #4A4A4A;
+  }
+
+  .head-page-description {
+    font-size: 14px;
+    line-height: 17px;
+
+    text-align: center;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    color: #7C7C7C;
+  }
+
   img {
     max-width: 100%;
     object-fit: contain;
@@ -129,6 +169,19 @@ body {
     padding-bottom: 50px;
     border: unset;
     border-radius: unset;
+
+    .icon-arrow-right {
+      content: url(/image/datepicker/arrow-right.svg);
+      position: absolute;
+      top: 10px;
+    }
+
+    .icon-arrow-left {
+      content: url(/image/datepicker/arrow-left.svg);
+      position: absolute;
+      top: 10px;
+    }
+
     &.datepicker-dropdown {
       &:after {
         display: none;
@@ -140,16 +193,41 @@ body {
 
       .table-condensed {
         width: 100%;
+
+        thead tr:first-child th:hover,
+        .datepicker tfoot tr:first-child th:hover {
+          background: unset;
+        }
+
+        th {
+          &.next {
+            width: 18px;
+            visibility: visible;
+            padding: 0px;
+            height: 1px;
+            position: relative;
+          }
+
+          &.prev {
+            width: 18px;
+            visibility: visible;
+            padding: 0px;
+            height: 1px;
+            position: relative;
+          }
+        }
       }
     }
-    .datepicker-days{
+
+    .datepicker-days {
       max-width: 280px;
       margin: 0 auto;
-      .table-condensed{
-        thead{
-          tr{
-            th{
-              &.switch{
+
+      .table-condensed {
+        thead {
+          tr {
+            th {
+              &.switch {
                 padding-bottom: 50px;
                 font-size: 16px;
                 line-height: 19px;
@@ -159,15 +237,17 @@ body {
             }
           }
         }
-        tr{
-          td{
+
+        tr {
+          td {
             width: 40px;
             height: 40px;
-            &.active{
-              background: unset!important;
-              color: #4A4A4A!important;
-              border: 1px solid #9B9B9B!important;
-              box-sizing: border-box!important;
+
+            &.active {
+              background: unset !important;
+              color: #4A4A4A !important;
+              border: 1px solid #9B9B9B !important;
+              box-sizing: border-box !important;
             }
           }
         }
@@ -179,13 +259,15 @@ body {
     background: #F9F9F9;
     padding-left: 0px;
     padding-right: 0px;
-    &:hover{
+
+    &:hover {
       outline-style: unset;
     }
+
     .btn-group {
       box-shadow: unset;
     }
-  
+
   }
 }
 
@@ -417,7 +499,7 @@ html {
 
         .title {
           font-style: normal;
-          font-weight: 500;
+          font-family: "AvenirNextLTPro-medium";
 
           @media (max-width: 768px) {
             font-size: 3vw;
@@ -438,20 +520,24 @@ html {
       bottom: -3px;
       left: 50%;
       transform: translate(-50%, 0%);
-
+      z-index: 2;
       .form-select-room__select__button {
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         width: 270px;
         height: 83px;
+
+        &:hover {
+          outline: inset 3px;
+        }
       }
 
       .form-select-room__select {
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)!important;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
         height: 83px;
 
         &.form-select-room__select__datepicker1 {
           width: 216px;
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)!important;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
           display: flex;
           align-items: center;
           height: 83px;
@@ -460,7 +546,7 @@ html {
         &.form-select-room__select__datepicker2 {
           width: 214px;
           height: 100%;
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)!important;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
           display: flex;
           align-items: center;
         }
@@ -473,7 +559,10 @@ html {
 
         a {
           width: 270px;
+              display: flex;
+              align-items: center;
           height: 62px;
+
           &:hover {
             background: #C4C4C4;
           }
@@ -561,7 +650,7 @@ html {
           }
 
           h3 {
-            font-weight: 500;
+            font-family: "AvenirNextLTPro-medium";
             font-size: 26px;
             line-height: 37px;
             color: #4A4A4A;
@@ -571,7 +660,7 @@ html {
             font-size: 16px;
             line-height: 24px;
             color: #4A4A4A;
-            margin-bottom: 43px;
+            margin-bottom: 32px;
 
           }
 
@@ -580,7 +669,7 @@ html {
             list-style: none;
             display: flex;
             flex-wrap: wrap;
-            margin-bottom: 27px;
+            margin-bottom: 12px;
 
             li {
               width: 50%;
@@ -603,7 +692,7 @@ html {
       .section__map__info__container {
         max-width: 100%;
         width: 100%;
-        padding-bottom: 40px;
+        padding-bottom: 58px;
         background: #FFFFFF;
         -webkit-box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
         box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
@@ -648,7 +737,10 @@ html {
 
             color: #9A8C60;
           }
-
+          .section__map__info__hotline__hotline {
+            @extend .section__map__info__hotline__email;
+            margin-top: 14px!important;
+          }
           .section__map__info__hotline__email {
             margin-top: 8px;
 
@@ -685,6 +777,7 @@ html {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
+        margin-bottom: -15px;
 
         @media (min-width: 768px) {
           margin-right: -30px;
@@ -822,7 +915,7 @@ html {
         .item-content {
           .item-title {
             color: #4E4E4E;
-            font-weight: 500;
+            font-family: "AvenirNextLTPro-medium";
             font-size: 26px;
             line-height: 37px;
             font-family: "AvenirNextLTPro-Medium",
@@ -1033,7 +1126,7 @@ html {
         margin-top: 54px;
 
         .page-detail__content-info-detail-list__title {
-          font-weight: 500;
+          font-family: "AvenirNextLTPro-medium";
           font-size: 18px;
           line-height: 22px;
           text-align: justify;
@@ -1305,7 +1398,7 @@ html {
       }
 
       .room-detail-container-top-content__item__title {
-        font-weight: 500;
+        font-family: "AvenirNextLTPro-medium";
         font-size: 12px;
         line-height: 24px;
         color: #9B9B9B;
@@ -1532,6 +1625,48 @@ html {
   .form-group {
     width: 370px;
     max-width: 100%;
+
+    .form-select-room__select {
+      border: 1px solid #4A4A4A;
+
+      button {
+        height: 46px;
+        display: flex;
+        justify-content: space-between;
+
+        &:focus {
+          box-shadow: unset;
+        }
+
+        &:hover {
+          outline-style: unset;
+          color: unset;
+        }
+      }
+
+      .dropdown-menu {
+        padding: 0px;
+        margin: 0px;
+        width: 370px;
+        max-width: 100%;
+        border-radius: 0px;
+        border: 1px solid #4A4A4A;
+
+        .dropdown-item {
+          height: 46px;
+          display: flex;
+          align-items: center;
+          font-size: 14px;
+          line-height: 17px;
+          color: #4A4A4A;
+
+          &:hover {
+            color: #4A4A4A !important;
+            background-color: #C4C4C4;
+          }
+        }
+      }
+    }
 
     input {
       height: 46px;

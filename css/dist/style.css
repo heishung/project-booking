@@ -38,6 +38,9 @@ body .component-title-medium {
 body .font-weight-medium {
   font-family: "AvenirNextLTPro-medium";
 }
+body .font-weight-demi {
+  font-family: "AvenirNextLTPro-Demi";
+}
 body .max-width-970 {
   width: 100%;
   max-width: 100%;
@@ -54,8 +57,20 @@ body .line-height-19 {
 body .margin-bottom-30 {
   margin-bottom: 30px;
 }
+body .margin-bottom-16 {
+  margin-bottom: 16px;
+}
+body .margin-bottom-19 {
+  margin-bottom: 19px;
+}
+body .margin-bottom-25 {
+  margin-bottom: 25px;
+}
 body .margin-bottom-56 {
   margin-bottom: 56px;
+}
+body .margin-bottom-50 {
+  margin-bottom: 50px;
 }
 body .title--small {
   font-size: 18px !important;
@@ -68,6 +83,9 @@ body .text--small {
   line-height: 24px;
   color: #7C7C7C;
 }
+body a {
+  color: #000000;
+}
 body a:hover {
   color: #9A8C60 !important;
   text-decoration: unset;
@@ -78,6 +96,21 @@ body .color--highlight {
 body .color--no-highlight {
   color: #7C7C7C;
 }
+body .head-title-medium {
+  font-family: "AvenirNextLTPro-medium";
+  font-size: 40px;
+  line-height: 55px;
+  text-align: center;
+  color: #4A4A4A;
+}
+body .head-page-description {
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #7C7C7C;
+}
 body img {
   max-width: 100%;
   object-fit: contain;
@@ -85,8 +118,20 @@ body img {
 }
 body .datepicker {
   width: 430px;
+  padding-top: 40px;
+  padding-bottom: 50px;
   border: unset;
   border-radius: unset;
+}
+body .datepicker .icon-arrow-right {
+  content: url(/image/datepicker/arrow-right.svg);
+  position: absolute;
+  top: 10px;
+}
+body .datepicker .icon-arrow-left {
+  content: url(/image/datepicker/arrow-left.svg);
+  position: absolute;
+  top: 10px;
 }
 body .datepicker.datepicker-dropdown:after {
   display: none;
@@ -97,9 +142,47 @@ body .datepicker.datepicker-dropdown:before {
 body .datepicker.datepicker-dropdown .table-condensed {
   width: 100%;
 }
+body .datepicker.datepicker-dropdown .table-condensed thead tr:first-child th:hover,
+body .datepicker.datepicker-dropdown .table-condensed .datepicker tfoot tr:first-child th:hover {
+  background: unset;
+}
+body .datepicker.datepicker-dropdown .table-condensed th.next {
+  width: 18px;
+  visibility: visible;
+  padding: 0px;
+  height: 1px;
+  position: relative;
+}
+body .datepicker.datepicker-dropdown .table-condensed th.prev {
+  width: 18px;
+  visibility: visible;
+  padding: 0px;
+  height: 1px;
+  position: relative;
+}
+body .datepicker .datepicker-days {
+  max-width: 280px;
+  margin: 0 auto;
+}
+body .datepicker .datepicker-days .table-condensed thead tr th.switch {
+  padding-bottom: 50px;
+  font-size: 16px;
+  line-height: 19px;
+  color: #4E4E4E;
+  font-weight: 400;
+}
+body .datepicker .datepicker-days .table-condensed tr td {
+  width: 40px;
+  height: 40px;
+}
+body .datepicker .datepicker-days .table-condensed tr td.active {
+  background: unset !important;
+  color: #4A4A4A !important;
+  border: 1px solid #9B9B9B !important;
+  box-sizing: border-box !important;
+}
 body #datepicker {
   background: #F9F9F9;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding-left: 0px;
   padding-right: 0px;
 }
@@ -293,7 +376,7 @@ html {
 }
 .wrapper header .banner .banner-text-content .title {
   font-style: normal;
-  font-weight: 500;
+  font-family: "AvenirNextLTPro-medium";
   font-size: 58px;
   line-height: 70px;
   text-align: center;
@@ -306,23 +389,36 @@ html {
   }
 }
 .wrapper header .form-select-room {
-  bottom: 0px;
+  bottom: -3px;
   left: 50%;
   transform: translate(-50%, 0%);
+  z-index: 2;
 }
 .wrapper header .form-select-room .form-select-room__select__button {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   width: 270px;
   height: 83px;
 }
+.wrapper header .form-select-room .form-select-room__select__button:hover {
+  outline: inset 3px;
+}
 .wrapper header .form-select-room .form-select-room__select {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+  height: 83px;
 }
 .wrapper header .form-select-room .form-select-room__select.form-select-room__select__datepicker1 {
   width: 216px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+  display: flex;
+  align-items: center;
+  height: 83px;
 }
 .wrapper header .form-select-room .form-select-room__select.form-select-room__select__datepicker2 {
   width: 214px;
+  height: 100%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+  display: flex;
+  align-items: center;
 }
 .wrapper header .form-select-room .form-select-room__select .dropdown-menu {
   top: -3px !important;
@@ -331,6 +427,8 @@ html {
 }
 .wrapper header .form-select-room .form-select-room__select a {
   width: 270px;
+  display: flex;
+  align-items: center;
   height: 62px;
 }
 .wrapper header .form-select-room .form-select-room__select a:hover {
@@ -393,7 +491,7 @@ html {
   max-width: 278px;
 }
 .wrapper section.section-1 .box-content .content h3 {
-  font-weight: 500;
+  font-family: "AvenirNextLTPro-medium";
   font-size: 26px;
   line-height: 37px;
   color: #4A4A4A;
@@ -402,14 +500,14 @@ html {
   font-size: 16px;
   line-height: 24px;
   color: #4A4A4A;
-  margin-bottom: 43px;
+  margin-bottom: 32px;
 }
 .wrapper section.section-1 .box-content .content ul {
   padding: 0px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 27px;
+  margin-bottom: 12px;
 }
 .wrapper section.section-1 .box-content .content ul li {
   width: 50%;
@@ -424,7 +522,7 @@ html {
 .wrapper section.section__map .section__map__info__container {
   max-width: 100%;
   width: 100%;
-  padding-bottom: 40px;
+  padding-bottom: 58px;
   background: #FFFFFF;
   -webkit-box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
@@ -467,17 +565,20 @@ html {
   text-transform: uppercase;
   color: #9A8C60;
 }
-.wrapper section.section__map .section__map__info__container .section__map__info .section__map__info__hotline__email {
+.wrapper section.section__map .section__map__info__container .section__map__info .section__map__info__hotline__hotline {
+  margin-top: 14px !important;
+}
+.wrapper section.section__map .section__map__info__container .section__map__info .section__map__info__hotline__email, .wrapper section.section__map .section__map__info__container .section__map__info .section__map__info__hotline__hotline {
   margin-top: 8px;
   font-size: 16px;
   line-height: 19px;
   text-align: justify;
   color: #4A4A4A;
 }
-.wrapper section.section__map .section__map__info__container .section__map__info .section__map__info__hotline__email:first-child {
+.wrapper section.section__map .section__map__info__container .section__map__info .section__map__info__hotline__email:first-child, .wrapper section.section__map .section__map__info__container .section__map__info .section__map__info__hotline__hotline:first-child {
   margin-top: 27px;
 }
-.wrapper section.section__map .section__map__info__container .section__map__info .section__map__info__hotline__email span {
+.wrapper section.section__map .section__map__info__container .section__map__info .section__map__info__hotline__email span, .wrapper section.section__map .section__map__info__container .section__map__info .section__map__info__hotline__hotline span {
   color: #9A8C60;
 }
 .wrapper section.section__map .section__map__info__container .section__map__info button, .wrapper section.section__map .section__map__info__container .section__map__info body .button, body .wrapper section.section__map .section__map__info__container .section__map__info .button {
@@ -492,6 +593,7 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin-bottom: -15px;
 }
 @media (min-width: 768px) {
   .wrapper section.section-2 ul {
@@ -601,7 +703,7 @@ html {
 }
 .wrapper .page-services-section-1 .page-services-card-list li .item-content .item-title {
   color: #4E4E4E;
-  font-weight: 500;
+  font-family: "AvenirNextLTPro-medium";
   font-size: 26px;
   line-height: 37px;
   font-family: "AvenirNextLTPro-Medium", Times, serif;
@@ -759,7 +861,7 @@ html {
   margin-top: 54px;
 }
 .wrapper .page-detail__content-info .page-detail__content-info-detail .page-detail__content-info-detail-list .page-detail__content-info-detail-list__title {
-  font-weight: 500;
+  font-family: "AvenirNextLTPro-medium";
   font-size: 18px;
   line-height: 22px;
   text-align: justify;
@@ -957,7 +1059,7 @@ html {
   }
 }
 .room-detail-container .room-detail-container-top-content .room-detail-container-top-content__item .room-detail-container-top-content__item__title {
-  font-weight: 500;
+  font-family: "AvenirNextLTPro-medium";
   font-size: 12px;
   line-height: 24px;
   color: #9B9B9B;
@@ -1124,6 +1226,41 @@ html {
 .form-contact .form-group {
   width: 370px;
   max-width: 100%;
+}
+.form-contact .form-group .form-select-room__select {
+  border: 1px solid #4A4A4A;
+}
+.form-contact .form-group .form-select-room__select button, .form-contact .form-group .form-select-room__select body .button, body .form-contact .form-group .form-select-room__select .button {
+  height: 46px;
+  display: flex;
+  justify-content: space-between;
+}
+.form-contact .form-group .form-select-room__select button:focus, .form-contact .form-group .form-select-room__select body .button:focus, body .form-contact .form-group .form-select-room__select .button:focus {
+  box-shadow: unset;
+}
+.form-contact .form-group .form-select-room__select button:hover, .form-contact .form-group .form-select-room__select body .button:hover, body .form-contact .form-group .form-select-room__select .button:hover {
+  outline-style: unset;
+  color: unset;
+}
+.form-contact .form-group .form-select-room__select .dropdown-menu {
+  padding: 0px;
+  margin: 0px;
+  width: 370px;
+  max-width: 100%;
+  border-radius: 0px;
+  border: 1px solid #4A4A4A;
+}
+.form-contact .form-group .form-select-room__select .dropdown-menu .dropdown-item {
+  height: 46px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 17px;
+  color: #4A4A4A;
+}
+.form-contact .form-group .form-select-room__select .dropdown-menu .dropdown-item:hover {
+  color: #4A4A4A !important;
+  background-color: #C4C4C4;
 }
 .form-contact .form-group input {
   height: 46px;
