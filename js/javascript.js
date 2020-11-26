@@ -1,6 +1,32 @@
 function fnScrollTop() {
     window.scrollTo({top: 0, behavior: "smooth"});
 }
+ function menuScroll() {
+            const menu = document.getElementById('menu');
+          
+            let prevScrollpos = window.pageYOffset;
+            window.onscroll = function () {
+                const currentScrollPos = window.pageYOffset;
+             
+                
+                if (menu) {
+                    if (menu.style.top !== "0px" && prevScrollpos > currentScrollPos) {
+                        menu.style.top = "0px";
+                        menu.style.position = "absolute";
+                    }
+                    if (
+                        menu.style.top !== "1px" &&
+                        prevScrollpos < currentScrollPos &&
+                        currentScrollPos > 2
+                    ) {
+                        menu.style.top = "1px";
+                        menu.style.position = "fixed";
+                    }
+                    prevScrollpos = currentScrollPos;
+                }
+            };
+        }
+        menuScroll();
 var appendNumber = 4;
     var prependNumber = 1;
     var swiper = new Swiper('.swiper-container', {
@@ -36,3 +62,4 @@ var appendNumber = 4;
         '<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>'
       ]);
     });
+

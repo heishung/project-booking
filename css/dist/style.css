@@ -1,26 +1,26 @@
 @font-face {
   font-family: "AvenirNextLTPro-Bold";
-  src: url("/font/AvenirNextLTPro-Bold.woff2") format("woff2");
+  src: url("./font/AvenirNextLTPro-Bold.woff2") format("woff2");
 }
 @font-face {
   font-family: "AvenirNextLTPro-Demi";
-  src: url("/font/AvenirNextLTPro-Demi.woff2") format("woff2");
+  src: url("./font/AvenirNextLTPro-Demi.woff2") format("woff2");
 }
 @font-face {
   font-family: "AvenirNextLTPro-Heavy";
-  src: url("/font/AvenirNextLTPro-Heavy.woff2") format("woff2");
+  src: url("./font/AvenirNextLTPro-Heavy.woff2") format("woff2");
 }
 @font-face {
   font-family: "AvenirNextLTPro-Medium";
-  src: url("/font/AvenirNextLTPro-Medium.woff2") format("woff2");
+  src: url("./font/AvenirNextLTPro-Medium.woff2") format("woff2");
 }
 @font-face {
   font-family: "AvenirNextLTPro-Regular";
-  src: url("/font/AvenirNextLTPro-Regular.woff2") format("woff2");
+  src: url("./font/AvenirNextLTPro-Regular.woff2") format("woff2");
 }
 @font-face {
   font-family: "AvenirNextLTPro-UltLt";
-  src: url("/font/AvenirNextLTPro-UltLt.woff2") format("woff2");
+  src: url("./font/AvenirNextLTPro-UltLt.woff2") format("woff2");
 }
 /* varible*/
 body {
@@ -220,8 +220,7 @@ button:focus, body .button:focus {
 }
 button:hover, body .button:hover {
   background-color: white;
-  outline-style: solid;
-  color: #9A8C60;
+  border: solid 1px #9A8C60;
 }
 
 html {
@@ -317,6 +316,7 @@ html {
 .wrapper header .banner .menu {
   top: 0px;
   left: 0px;
+  z-index: 4;
   width: 100%;
   position: absolute;
   background: rgba(35, 35, 35, 0.5);

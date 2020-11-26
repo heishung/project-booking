@@ -1,36 +1,38 @@
 @font-face {
   font-family: 'AvenirNextLTPro-Bold';
-  src: url("/font/AvenirNextLTPro-Bold.woff2") format("woff2");
+  src: url("./font/AvenirNextLTPro-Bold.woff2") format("woff2");
 }
 
 @font-face {
   font-family: 'AvenirNextLTPro-Demi';
-  src: url("/font/AvenirNextLTPro-Demi.woff2") format("woff2");
+  src: url("../font/AvenirNextLTPro-Demi.woff2") format("woff2");
 }
 
 @font-face {
   font-family: 'AvenirNextLTPro-Heavy';
-  src: url("/font/AvenirNextLTPro-Heavy.woff2") format("woff2");
+  src: url("../font/AvenirNextLTPro-Heavy.woff2") format("woff2");
 }
 
 @font-face {
   font-family: 'AvenirNextLTPro-Medium';
-  src: url("/font/AvenirNextLTPro-Medium.woff2") format("woff2");
+  src: url("../font/AvenirNextLTPro-Medium.woff2") format("woff2");
 }
 
 @font-face {
   font-family: 'AvenirNextLTPro-Regular';
-  src: url("/font/AvenirNextLTPro-Regular.woff2") format("woff2");
+  src: url("../font/AvenirNextLTPro-Regular.woff2") format("woff2");
 }
 
 @font-face {
   font-family: 'AvenirNextLTPro-UltLt';
-  src: url("/font/AvenirNextLTPro-UltLt.woff2") format("woff2");
+  src: url("../font/AvenirNextLTPro-UltLt.woff2") format("woff2");
 }
 
 /* varible*/
 body {
-  font-family: 'AvenirNextLTPro-Regular', Fallback, sans-serif;
+  font-family: 'AvenirNextLTPro-Regular',
+ Fallback,
+ sans-serif;
 }
 
 body .line-height-30 {
@@ -38,14 +40,14 @@ body .line-height-30 {
 }
 
 body .component-title-medium {
-  font-family: "AvenirNextLTPro-medium";
+  font-family: "AvenirNextLTPro-Medium";
   font-size: 24px;
   line-height: 37px;
   color: #4A4A4A;
 }
 
 body .font-weight-medium {
-  font-family: "AvenirNextLTPro-medium";
+  font-family: "AvenirNextLTPro-Medium";
 }
 
 body .font-weight-demi {
@@ -124,7 +126,7 @@ body .color--no-highlight {
 }
 
 body .head-title-medium {
-  font-family: "AvenirNextLTPro-medium";
+  font-family: "AvenirNextLTPro-Medium";
   font-size: 40px;
   line-height: 55px;
   text-align: center;
@@ -276,8 +278,7 @@ button:focus, body .button:focus {
 
 button:hover, body .button:hover {
   background-color: white;
-  outline-style: solid;
-  color: #9A8C60;
+  border: solid 1px #9A8C60;
 }
 
 html {
@@ -402,6 +403,7 @@ html {
 .wrapper header .banner .menu {
   top: 0px;
   left: 0px;
+  z-index: 4;
   width: 100%;
   position: absolute;
   background: rgba(35, 35, 35, 0.5);
@@ -481,7 +483,7 @@ html {
 
 .wrapper header .banner .banner-text-content .title {
   font-style: normal;
-  font-family: "AvenirNextLTPro-medium";
+  font-family: "AvenirNextLTPro-Medium";
   font-size: 58px;
   line-height: 70px;
   text-align: center;
@@ -588,7 +590,7 @@ html {
 }
 
 .wrapper section .title {
-  font-family: "AvenirNextLTPro-medium";
+  font-family: "AvenirNextLTPro-Medium";
   font-size: 44px;
   line-height: 59px;
   text-align: center;
@@ -645,7 +647,7 @@ html {
 }
 
 .wrapper section.section-1 .box-content .content h3 {
-  font-family: "AvenirNextLTPro-medium";
+  font-family: "AvenirNextLTPro-Medium";
   font-size: 26px;
   line-height: 37px;
   color: #4A4A4A;
@@ -714,7 +716,7 @@ html {
 }
 
 .wrapper section.section__map .section__map__info__container .section__map__info .section__map__info__title {
-  font-family: "AvenirNextLTPro-medium";
+  font-family: "AvenirNextLTPro-Medium";
   margin-bottom: 0px;
   font-size: 32px;
   line-height: 59px;
@@ -914,10 +916,12 @@ html {
 
 .wrapper .page-services-section-1 .page-services-card-list li .item-content .item-title {
   color: #4E4E4E;
-  font-family: "AvenirNextLTPro-medium";
+  font-family: "AvenirNextLTPro-Medium";
   font-size: 26px;
   line-height: 37px;
-  font-family: "AvenirNextLTPro-Medium", Times, serif;
+  font-family: "AvenirNextLTPro-Medium",
+ Times,
+ serif;
 }
 
 .wrapper .page-services-section-1 .page-services-card-list li .item-content .page-services-section-1-time {
@@ -1073,7 +1077,7 @@ html {
 
 .wrapper .offer-detail__top .offer-detail__top-description {
   margin-top: 16px;
-  font-family: "AvenirNextLTPro-medium";
+  font-family: "AvenirNextLTPro-Medium";
   font-size: 40px;
   line-height: 55px;
   text-align: center;
@@ -1124,7 +1128,7 @@ html {
 }
 
 .wrapper .page-detail__content-info .page-detail__content-info-detail .page-detail__content-info-detail-list .page-detail__content-info-detail-list__title {
-  font-family: "AvenirNextLTPro-medium";
+  font-family: "AvenirNextLTPro-Medium";
   font-size: 18px;
   line-height: 22px;
   text-align: justify;
@@ -1165,13 +1169,13 @@ html {
 }
 
 .wrapper .page-detail__content-info .page-detail__content-info-detail .title-open span {
-  font-family: "AvenirNextLTPro-medium";
+  font-family: "AvenirNextLTPro-Medium";
   color: #4E4E4E;
 }
 
 .wrapper .page-detail__content-info .page-detail__content-info-box__title {
   margin-bottom: 15px;
-  font-family: "AvenirNextLTPro-medium";
+  font-family: "AvenirNextLTPro-Medium";
   font-size: 18px;
   line-height: 24px;
   color: #232323;
@@ -1184,7 +1188,7 @@ html {
 }
 
 .wrapper .page-detail__content-info .page-detail__content-info-box__price span {
-  font-family: "AvenirNextLTPro-medium";
+  font-family: "AvenirNextLTPro-Medium";
   font-size: 18px;
   line-height: 22px;
   color: #232323;
@@ -1323,7 +1327,7 @@ html {
 }
 
 .room-container-info .room-container-info-content .room-container-info-title {
-  font-family: "AvenirNextLTPro-medium";
+  font-family: "AvenirNextLTPro-Medium";
   font-size: 26px;
   line-height: 37px;
   color: #4A4A4A;
@@ -1365,7 +1369,7 @@ html {
 }
 
 .room-detail-container .room-detail-container-top-content .room-detail-container-top-content__item .room-detail-container-top-content__item__title {
-  font-family: "AvenirNextLTPro-medium";
+  font-family: "AvenirNextLTPro-Medium";
   font-size: 12px;
   line-height: 24px;
   color: #9B9B9B;
@@ -1389,7 +1393,7 @@ html {
 }
 
 .room-detail-container .room-detail-container__content .room-detail-container__benefits .room-detail-container__benefits__title {
-  font-family: "AvenirNextLTPro-medium";
+  font-family: "AvenirNextLTPro-Medium";
   font-size: 18px;
   line-height: 22px;
   text-align: justify;
@@ -1418,7 +1422,7 @@ html {
 }
 
 .room-detail-container .room-detail-container__content .room-detail-container__feature .room-detail-container__benefits__title {
-  font-family: "AvenirNextLTPro-medium";
+  font-family: "AvenirNextLTPro-Medium";
   font-size: 18px;
   line-height: 22px;
   text-align: justify;
@@ -1458,7 +1462,7 @@ html {
 
 .conferance-post .conferance-post__container .conferance-post__title {
   height: 92px;
-  font-family: 'AvenirNextLTPro-medium';
+  font-family: 'AvenirNextLTPro-Medium';
   font-size: 32px;
   line-height: 42px;
   /* or 131% */
