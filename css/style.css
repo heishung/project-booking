@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'AvenirNextLTPro-Bold';
-  src: url("./font/AvenirNextLTPro-Bold.woff2") format("woff2");
+  src: url("../font/AvenirNextLTPro-Bold.woff2") format("woff2");
 }
 
 @font-face {
@@ -30,9 +30,7 @@
 
 /* varible*/
 body {
-  font-family: 'AvenirNextLTPro-Regular',
- Fallback,
- sans-serif;
+  font-family: 'AvenirNextLTPro-Regular', Fallback, sans-serif;
 }
 
 body .line-height-30 {
@@ -40,14 +38,14 @@ body .line-height-30 {
 }
 
 body .component-title-medium {
-  font-family: "AvenirNextLTPro-Medium";
+  font-family: "AvenirNextLTPro-medium";
   font-size: 24px;
   line-height: 37px;
   color: #4A4A4A;
 }
 
 body .font-weight-medium {
-  font-family: "AvenirNextLTPro-Medium";
+  font-family: "AvenirNextLTPro-medium";
 }
 
 body .font-weight-demi {
@@ -126,7 +124,7 @@ body .color--no-highlight {
 }
 
 body .head-title-medium {
-  font-family: "AvenirNextLTPro-Medium";
+  font-family: "AvenirNextLTPro-medium";
   font-size: 40px;
   line-height: 55px;
   text-align: center;
@@ -169,6 +167,10 @@ body .datepicker .icon-arrow-left {
   top: 10px;
 }
 
+body .datepicker.datepicker-dropdown {
+  background-color: #F9F9F9 !important;
+}
+
 body .datepicker.datepicker-dropdown:after {
   display: none;
 }
@@ -202,6 +204,10 @@ body .datepicker.datepicker-dropdown .table-condensed th.prev {
   position: relative;
 }
 
+body .datepicker.datepicker-dropdown.datepicker-dropdown2-show {
+  left: calc(951.5px - 214px) !important;
+}
+
 body .datepicker .datepicker-days {
   max-width: 280px;
   margin: 0 auto;
@@ -228,17 +234,17 @@ body .datepicker .datepicker-days .table-condensed tr td.active {
           box-sizing: border-box !important;
 }
 
-body #datepicker {
+body #datepicker, body #datepicker2 {
   background: #F9F9F9;
   padding-left: 0px;
   padding-right: 0px;
 }
 
-body #datepicker:hover {
+body #datepicker:hover, body #datepicker2:hover {
   outline-style: unset;
 }
 
-body #datepicker .btn-group {
+body #datepicker .btn-group, body #datepicker2 .btn-group {
   -webkit-box-shadow: unset;
           box-shadow: unset;
 }
@@ -270,6 +276,7 @@ button, body .button {
           align-items: center;
   letter-spacing: 0.777778px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 button:focus, body .button:focus {
@@ -278,6 +285,7 @@ button:focus, body .button:focus {
 
 button:hover, body .button:hover {
   background-color: white;
+  color: #9A8C60;
   border: solid 1px #9A8C60;
 }
 
@@ -483,7 +491,7 @@ html {
 
 .wrapper header .banner .banner-text-content .title {
   font-style: normal;
-  font-family: "AvenirNextLTPro-Medium";
+  font-family: "AvenirNextLTPro-medium";
   font-size: 58px;
   line-height: 70px;
   text-align: center;
@@ -505,21 +513,28 @@ html {
   z-index: 2;
 }
 
+.wrapper header .form-select-room button:hover, .wrapper header .form-select-room body .button:hover, body .wrapper header .form-select-room .button:hover {
+  border: unset;
+}
+
 .wrapper header .form-select-room .form-select-room__select__button {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   width: 270px;
   height: 83px;
-}
-
-.wrapper header .form-select-room .form-select-room__select__button:hover {
-  outline: inset 3px;
+  font-size: 16px;
+  line-height: 19px;
 }
 
 .wrapper header .form-select-room .form-select-room__select {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
   height: 83px;
+}
+
+.wrapper header .form-select-room .form-select-room__select span {
+  font-size: 18px;
+  line-height: 22px;
 }
 
 .wrapper header .form-select-room .form-select-room__select.form-select-room__select__datepicker1 {
@@ -551,7 +566,7 @@ html {
 .wrapper header .form-select-room .form-select-room__select .dropdown-menu {
   top: -3px !important;
   border: unset;
-  background: #F9F9F9;
+  background-color: #F9F9F9 !important;
 }
 
 .wrapper header .form-select-room .form-select-room__select a {
@@ -590,7 +605,7 @@ html {
 }
 
 .wrapper section .title {
-  font-family: "AvenirNextLTPro-Medium";
+  font-family: "AvenirNextLTPro-medium";
   font-size: 44px;
   line-height: 59px;
   text-align: center;
@@ -647,7 +662,7 @@ html {
 }
 
 .wrapper section.section-1 .box-content .content h3 {
-  font-family: "AvenirNextLTPro-Medium";
+  font-family: "AvenirNextLTPro-medium";
   font-size: 26px;
   line-height: 37px;
   color: #4A4A4A;
@@ -716,7 +731,7 @@ html {
 }
 
 .wrapper section.section__map .section__map__info__container .section__map__info .section__map__info__title {
-  font-family: "AvenirNextLTPro-Medium";
+  font-family: "AvenirNextLTPro-medium";
   margin-bottom: 0px;
   font-size: 32px;
   line-height: 59px;
@@ -916,12 +931,10 @@ html {
 
 .wrapper .page-services-section-1 .page-services-card-list li .item-content .item-title {
   color: #4E4E4E;
-  font-family: "AvenirNextLTPro-Medium";
+  font-family: "AvenirNextLTPro-medium";
   font-size: 26px;
   line-height: 37px;
-  font-family: "AvenirNextLTPro-Medium",
- Times,
- serif;
+  font-family: "AvenirNextLTPro-Medium", Times, serif;
 }
 
 .wrapper .page-services-section-1 .page-services-card-list li .item-content .page-services-section-1-time {
@@ -1077,7 +1090,7 @@ html {
 
 .wrapper .offer-detail__top .offer-detail__top-description {
   margin-top: 16px;
-  font-family: "AvenirNextLTPro-Medium";
+  font-family: "AvenirNextLTPro-medium";
   font-size: 40px;
   line-height: 55px;
   text-align: center;
@@ -1128,7 +1141,7 @@ html {
 }
 
 .wrapper .page-detail__content-info .page-detail__content-info-detail .page-detail__content-info-detail-list .page-detail__content-info-detail-list__title {
-  font-family: "AvenirNextLTPro-Medium";
+  font-family: "AvenirNextLTPro-medium";
   font-size: 18px;
   line-height: 22px;
   text-align: justify;
@@ -1169,13 +1182,13 @@ html {
 }
 
 .wrapper .page-detail__content-info .page-detail__content-info-detail .title-open span {
-  font-family: "AvenirNextLTPro-Medium";
+  font-family: "AvenirNextLTPro-medium";
   color: #4E4E4E;
 }
 
 .wrapper .page-detail__content-info .page-detail__content-info-box__title {
   margin-bottom: 15px;
-  font-family: "AvenirNextLTPro-Medium";
+  font-family: "AvenirNextLTPro-medium";
   font-size: 18px;
   line-height: 24px;
   color: #232323;
@@ -1188,7 +1201,7 @@ html {
 }
 
 .wrapper .page-detail__content-info .page-detail__content-info-box__price span {
-  font-family: "AvenirNextLTPro-Medium";
+  font-family: "AvenirNextLTPro-medium";
   font-size: 18px;
   line-height: 22px;
   color: #232323;
@@ -1245,6 +1258,11 @@ html {
 
 .wrapper .page-gallery-section-1 .gallery-section-1-pagination {
   margin-top: 56px;
+}
+
+.wrapper .page-gallery-section-1 #gallery > div {
+  text-align: center;
+  padding: 15px !important;
 }
 
 .container-about .content {
@@ -1327,7 +1345,7 @@ html {
 }
 
 .room-container-info .room-container-info-content .room-container-info-title {
-  font-family: "AvenirNextLTPro-Medium";
+  font-family: "AvenirNextLTPro-medium";
   font-size: 26px;
   line-height: 37px;
   color: #4A4A4A;
@@ -1369,7 +1387,7 @@ html {
 }
 
 .room-detail-container .room-detail-container-top-content .room-detail-container-top-content__item .room-detail-container-top-content__item__title {
-  font-family: "AvenirNextLTPro-Medium";
+  font-family: "AvenirNextLTPro-medium";
   font-size: 12px;
   line-height: 24px;
   color: #9B9B9B;
@@ -1393,7 +1411,7 @@ html {
 }
 
 .room-detail-container .room-detail-container__content .room-detail-container__benefits .room-detail-container__benefits__title {
-  font-family: "AvenirNextLTPro-Medium";
+  font-family: "AvenirNextLTPro-medium";
   font-size: 18px;
   line-height: 22px;
   text-align: justify;
@@ -1422,7 +1440,7 @@ html {
 }
 
 .room-detail-container .room-detail-container__content .room-detail-container__feature .room-detail-container__benefits__title {
-  font-family: "AvenirNextLTPro-Medium";
+  font-family: "AvenirNextLTPro-medium";
   font-size: 18px;
   line-height: 22px;
   text-align: justify;
@@ -1462,7 +1480,7 @@ html {
 
 .conferance-post .conferance-post__container .conferance-post__title {
   height: 92px;
-  font-family: 'AvenirNextLTPro-Medium';
+  font-family: 'AvenirNextLTPro-medium';
   font-size: 32px;
   line-height: 42px;
   /* or 131% */
@@ -1504,7 +1522,7 @@ html {
 }
 
 .section-swiper .swiper-button-next:after {
-  content: url(/image/swiper/icon-next.svg);
+  content: url(../image/swiper/icon-next.svg);
   width: 36px;
   height: 20px;
 }
@@ -1514,7 +1532,7 @@ html {
 }
 
 .section-swiper .swiper-button-prev:after {
-  content: url(/image/swiper/icon-prev.svg);
+  content: url(../image/swiper/icon-prev.svg);
   width: 36px;
   height: 20px;
 }
@@ -1562,11 +1580,11 @@ html {
 }
 
 .section-collapse .card .card-header .collapse-button-head.collapsed:before {
-  content: url(/image/service/icon-tru.svg);
+  content: url(../image/service/icon-tru.svg);
 }
 
 .section-collapse .card .card-header .collapse-button-head:before {
-  content: url(/image/service/icon-plus.svg);
+  content: url(../image/service/icon-plus.svg);
   display: block;
   margin-right: 11px;
 }
@@ -1578,6 +1596,8 @@ html {
 
 .form-contact .form-group .form-select-room__select {
   border: 1px solid #4A4A4A;
+  font-size: 18px;
+  line-height: 22px;
 }
 
 .form-contact .form-group .form-select-room__select button, .form-contact .form-group .form-select-room__select body .button, body .form-contact .form-group .form-select-room__select .button {

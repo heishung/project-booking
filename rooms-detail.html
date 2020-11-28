@@ -5,9 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./css/bootstrap.min.css">
-  <link rel="stylesheet" href="./css/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/datepicker.css">
   <script src="./js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="./css/jquery-ui.css">
+  <script src="./js/jquery-1.12.4.js"></script>
+  <script src="./js/jquery-ui.js"></script>
+  <script>
+    $(function () {
+      $("#datepicker").datepicker("widget");
+    });
+    $(function () {
+      $("#datepicker2").datepicker();
+    });
+
+
+    // const btnpicker2 = document.getElementsByClassName('form-select-room__select__datepicker2');
+    async function clickPick1() {
+      const picker2 = await document.getElementsByClassName('datepicker-dropdown');
+      $(".datepicker-dropdown").removeClass("datepicker-dropdown2-show");
+    }
+    async function clickPick2() {
+      const picker2 = await document.getElementsByClassName('datepicker-dropdown');
+      $(".datepicker-dropdown").addClass("datepicker-dropdown2-show");
+    }
+  </script>
+
 
 </head>
 <body>
@@ -21,7 +44,7 @@
         </div>
       </div>
       <div class="banner banner-medium">
-        <img class="banner-img" src="./image/room-suites/banner.svg" alt="banner">
+        <img class="banner-img" src="./image/room-detail/banner.png" alt="banner">
         <div class="menu" id="menu">
 
           <ul class="nav container justify-content-between d-flex">
@@ -40,6 +63,43 @@
           <p class="description banner-text-content-breadcrumb"><span>Rate from</span> <span
               class="text-white">$400</span> <span>per night</span></p>
 
+        </div>
+        <div class="position-absolute w-100 d-flex justify-content-center form-select-room">
+          <form class="d-flex flex-wrap">
+            <div class="btn-group form-select-room__select">
+              <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="text-capitalize">Guests</span> <img src="./image/icon-dropdown-select.svg" />
+              </button>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" type="button">1</a>
+                <a class="dropdown-item" type="button">2</a>
+                <a class="dropdown-item" type="button">3</a>
+                <a class="dropdown-item" type="button">4</a>
+                <a class="dropdown-item" type="button">5</a>
+              </div>
+            </div>
+            <button id="datepicker" onclick="clickPick1()">
+              <div class="btn-group form-select-room__select form-select-room__select__datepicker1">
+                <div class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="text-capitalize"> Check in</span> <img src="./image/icon-dropdown-select.svg" />
+                </div>
+
+              </div>
+
+            </button>
+            <button id="datepicker2" onclick="clickPick2()">
+              <div class="btn-group form-select-room__select form-select-room__select__datepicker2">
+                <div class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="text-capitalize"> Check out </span>
+                  <img src="./image/icon-dropdown-select.svg" />
+                </div>
+
+              </div>
+
+            </button>
+
+            <a href="./room-checkout.html" class="form-select-room__select__button button">select Room</a>
+          </form>
         </div>
       </div>
     </header>
@@ -163,7 +223,8 @@
             <div class="description">
               We are proud to offer guests a luxurious taste at the meeting center …
             </div>
-            <a class="item-read-more">Explore more <img src="./image/home/section4/icon-arrow.svg" alt="icon-arrow" /></a>
+            <a class="item-read-more">Explore more <img src="./image/home/section4/icon-arrow.svg"
+                alt="icon-arrow" /></a>
           </div>
         </li>
 
@@ -176,7 +237,8 @@
             <div class="description">
               Reserve a suite and receive round-trip airport transfer plus breakfast
             </div>
-            <a class="item-read-more">Explore more <img src="./image/home/section4/icon-arrow.svg" alt="icon-arrow" /></a>
+            <a class="item-read-more">Explore more <img src="./image/home/section4/icon-arrow.svg"
+                alt="icon-arrow" /></a>
           </div>
         </li>
 
@@ -190,7 +252,8 @@
               Efficient and appealing, The Lobby’s brand new Curtain Call menu is designed …
 
             </div>
-            <a class="item-read-more">Explore more <img src="./image/home/section4/icon-arrow.svg" alt="icon-arrow" /></a>
+            <a class="item-read-more">Explore more <img src="./image/home/section4/icon-arrow.svg"
+                alt="icon-arrow" /></a>
           </div>
         </li>
 
@@ -203,7 +266,8 @@
             <div class="description">
               Toast the ocean’s bounty with a smorgasbord of marine treasures this summer …
             </div>
-            <a class="item-read-more">Explore more <img src="./image/home/section4/icon-arrow.svg" alt="icon-arrow" /></a>
+            <a class="item-read-more">Explore more <img src="./image/home/section4/icon-arrow.svg"
+                alt="icon-arrow" /></a>
           </div>
         </li>
 
@@ -227,7 +291,7 @@
             <li><a href="#">33 Giang Van Minh, Ba Dinh, Ha Noi</a></li>
             <li><a href="#">uvacomehotel@gmail.com</a></li>
             <li><a href="#">(024) 37477600</a></li>
-    
+
           </ul>
           <ul>
             <li><a href="#">Hotel & Resort</a></li>
@@ -258,15 +322,15 @@
             <span>© 2019 Uvacomehotel. All Rights Reserved</span><a onclick='fnScrollTop()' id="" href="#top"><img
                 src="./image/to-top.svg" /></a>
           </div>
-    
+
         </div>
       </div>
     </footer>
   </div>
-  <script src="./js/swiper-bundle.min.js"></script>
   <script src="./js/jquery-3.5.1.slim.min.js"></script>
   <script src="./js/popper.min.js"></script>
   <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/bootstrap-datepicker.js"></script>
   <script src="./js/javascript.js"></script>
 </body>
 </html>

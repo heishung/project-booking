@@ -1,26 +1,26 @@
 @font-face {
   font-family: "AvenirNextLTPro-Bold";
-  src: url("./font/AvenirNextLTPro-Bold.woff2") format("woff2");
+  src: url("../font/AvenirNextLTPro-Bold.woff2") format("woff2");
 }
 @font-face {
   font-family: "AvenirNextLTPro-Demi";
-  src: url("./font/AvenirNextLTPro-Demi.woff2") format("woff2");
+  src: url("../font/AvenirNextLTPro-Demi.woff2") format("woff2");
 }
 @font-face {
   font-family: "AvenirNextLTPro-Heavy";
-  src: url("./font/AvenirNextLTPro-Heavy.woff2") format("woff2");
+  src: url("../font/AvenirNextLTPro-Heavy.woff2") format("woff2");
 }
 @font-face {
   font-family: "AvenirNextLTPro-Medium";
-  src: url("./font/AvenirNextLTPro-Medium.woff2") format("woff2");
+  src: url("../font/AvenirNextLTPro-Medium.woff2") format("woff2");
 }
 @font-face {
   font-family: "AvenirNextLTPro-Regular";
-  src: url("./font/AvenirNextLTPro-Regular.woff2") format("woff2");
+  src: url("../font/AvenirNextLTPro-Regular.woff2") format("woff2");
 }
 @font-face {
   font-family: "AvenirNextLTPro-UltLt";
-  src: url("./font/AvenirNextLTPro-UltLt.woff2") format("woff2");
+  src: url("../font/AvenirNextLTPro-UltLt.woff2") format("woff2");
 }
 /* varible*/
 body {
@@ -125,14 +125,17 @@ body .datepicker {
   border-radius: unset;
 }
 body .datepicker .icon-arrow-right {
-  content: url(/image/datepicker/arrow-right.svg);
+  content: url(../image/datepicker/arrow-right.svg);
   position: absolute;
   top: 10px;
 }
 body .datepicker .icon-arrow-left {
-  content: url(/image/datepicker/arrow-left.svg);
+  content: url(../image/datepicker/arrow-left.svg);
   position: absolute;
   top: 10px;
+}
+body .datepicker.datepicker-dropdown {
+  background-color: #F9F9F9 !important;
 }
 body .datepicker.datepicker-dropdown:after {
   display: none;
@@ -161,6 +164,9 @@ body .datepicker.datepicker-dropdown .table-condensed th.prev {
   height: 1px;
   position: relative;
 }
+body .datepicker.datepicker-dropdown.datepicker-dropdown2-show {
+  left: calc(951.5px - 214px) !important;
+}
 body .datepicker .datepicker-days {
   max-width: 280px;
   margin: 0 auto;
@@ -182,18 +188,17 @@ body .datepicker .datepicker-days .table-condensed tr td.active {
   border: 1px solid #9B9B9B !important;
   box-sizing: border-box !important;
 }
-body #datepicker {
+body #datepicker, body #datepicker2 {
   background: #F9F9F9;
   padding-left: 0px;
   padding-right: 0px;
 }
-body #datepicker:hover {
+body #datepicker:hover, body #datepicker2:hover {
   outline-style: unset;
 }
-body #datepicker .btn-group {
+body #datepicker .btn-group, body #datepicker2 .btn-group {
   box-shadow: unset;
 }
-
 img.img-cover {
   position: absolute;
   left: 0px;
@@ -214,12 +219,14 @@ button, body .button {
   align-items: center;
   letter-spacing: 0.777778px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 button:focus, body .button:focus {
   outline: none;
 }
 button:hover, body .button:hover {
   background-color: white;
+  color: #9A8C60;
   border: solid 1px #9A8C60;
 }
 
@@ -395,17 +402,23 @@ html {
   transform: translate(-50%, 0%);
   z-index: 2;
 }
+.wrapper header .form-select-room button:hover, .wrapper header .form-select-room body .button:hover, body .wrapper header .form-select-room .button:hover {
+  border: unset;
+}
 .wrapper header .form-select-room .form-select-room__select__button {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   width: 270px;
   height: 83px;
-}
-.wrapper header .form-select-room .form-select-room__select__button:hover {
-  outline: inset 3px;
+  font-size: 16px;
+  line-height: 19px;
 }
 .wrapper header .form-select-room .form-select-room__select {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
   height: 83px;
+}
+.wrapper header .form-select-room .form-select-room__select span {
+  font-size: 18px;
+  line-height: 22px;
 }
 .wrapper header .form-select-room .form-select-room__select.form-select-room__select__datepicker1 {
   width: 216px;
@@ -424,7 +437,7 @@ html {
 .wrapper header .form-select-room .form-select-room__select .dropdown-menu {
   top: -3px !important;
   border: unset;
-  background: #F9F9F9;
+  background-color: #F9F9F9 !important;
 }
 .wrapper header .form-select-room .form-select-room__select a {
   width: 270px;
@@ -960,6 +973,10 @@ html {
 .wrapper .page-gallery-section-1 .gallery-section-1-pagination {
   margin-top: 56px;
 }
+.wrapper .page-gallery-section-1 #gallery > div {
+  text-align: center;
+  padding: 15px !important;
+}
 
 .container-about .content {
   width: 770px;
@@ -1172,7 +1189,7 @@ html {
   right: 20px;
 }
 .section-swiper .swiper-button-next:after {
-  content: url(/image/swiper/icon-next.svg);
+  content: url(../image/swiper/icon-next.svg);
   width: 36px;
   height: 20px;
 }
@@ -1180,7 +1197,7 @@ html {
   left: 20px;
 }
 .section-swiper .swiper-button-prev:after {
-  content: url(/image/swiper/icon-prev.svg);
+  content: url(../image/swiper/icon-prev.svg);
   width: 36px;
   height: 20px;
 }
@@ -1216,10 +1233,10 @@ html {
   width: 100%;
 }
 .section-collapse .card .card-header .collapse-button-head.collapsed:before {
-  content: url(/image/service/icon-tru.svg);
+  content: url(../image/service/icon-tru.svg);
 }
 .section-collapse .card .card-header .collapse-button-head:before {
-  content: url(/image/service/icon-plus.svg);
+  content: url(../image/service/icon-plus.svg);
   display: block;
   margin-right: 11px;
 }
@@ -1230,6 +1247,8 @@ html {
 }
 .form-contact .form-group .form-select-room__select {
   border: 1px solid #4A4A4A;
+  font-size: 18px;
+  line-height: 22px;
 }
 .form-contact .form-group .form-select-room__select button, .form-contact .form-group .form-select-room__select body .button, body .form-contact .form-group .form-select-room__select .button {
   height: 46px;
