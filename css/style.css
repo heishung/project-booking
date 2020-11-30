@@ -448,6 +448,10 @@ html {
     font-size: 16px;
     padding: 0px;
   }
+  .wrapper header .banner .menu ul.nav li.item.logo {
+    text-align: center;
+    width: 140px;
+  }
 }
 
 .wrapper header .banner .menu ul.nav li.item a {

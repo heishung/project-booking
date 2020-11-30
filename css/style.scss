@@ -459,10 +459,14 @@ html {
             align-items: center;
             font-size: 13px;
             padding: 5px;
-
+          
             @media(min-width: 768px) {
               font-size: 16px;
               padding: 0px;
+              &.logo{
+                text-align: center;
+                width: 140px;
+              }
             }
 
             line-height: 19px;
