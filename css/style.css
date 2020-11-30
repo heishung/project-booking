@@ -1029,8 +1029,13 @@ html {
 }
 
 .wrapper .offer-section-1 .offer-section-1-breadcrumb .breadcrumb-item, .wrapper .rooms-suites-section-1 .offer-section-1-breadcrumb .breadcrumb-item {
+  font-family: "AvenirNextLTPro-Regular";
   color: #9B9B9B;
   padding-left: 0px;
+}
+
+.wrapper .offer-section-1 .offer-section-1-breadcrumb .breadcrumb-item.active a, .wrapper .rooms-suites-section-1 .offer-section-1-breadcrumb .breadcrumb-item.active a {
+  color: #9B9B9B;
 }
 
 .wrapper .offer-section-1 .offer-section-1-breadcrumb .breadcrumb-item a, .wrapper .rooms-suites-section-1 .offer-section-1-breadcrumb .breadcrumb-item a {

@@ -1038,6 +1038,12 @@ html {
       margin-bottom: 55px;
 
       .breadcrumb-item {
+        font-family : "AvenirNextLTPro-Regular";
+        &.active{
+          a {
+            color: #9B9B9B;
+          }
+        }
         a {
           color: $color-highlight;
         }
